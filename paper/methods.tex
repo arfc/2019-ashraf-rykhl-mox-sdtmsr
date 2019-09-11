@@ -1,0 +1,216 @@
+\section{Model description}
+\subsection{Geometry}
+The \gls{SD-TMSR} design model was introduced by the \gls{CAS} during the strategic project ``Future Advanced Nuclear Energy $-$ Thorium-based Molten Salt Reactor System (TMSR)" in 2011 \cite{li_optimization_2018,jiang2012advanced,li2015analysis,li2017model}. The design of \gls{SD-TMSR} is inspired by \gls{MSBR} \cite{robertson_conceptual_1971} after some modification in the geometry to control the positive temperature coefficient in MSBR. The \gls{SD-TMSR} model is described deeply in \cite{li_optimization_2018}.
+Figure~\ref{fig:ff} illustrates the quarter-core model configuration of the \gls{SD-TMSR}. The active zone is a right cylinder with height and diameter equal to 460 cm. Assemblies of graphite\footnote{Density of graphite 2.3 g/cm$^3$.} hexagonal prisms fill the core. The side length of the graphite hexagonal prism was optimized in \cite{li_optimization_2018} and found to be 7.5 cm. The liquid fuel circulates continuously through the fuel channels that pierces the graphite hexagonal prisms. The active zone is divided into two different zones to enhance Th-U breeding performance. The radius of the fuel tubes in the outer zone is 5 cm and the radius of the fuel tubes in the inner zone is 3.5 cm. Moreover, axial and radial reflectors from graphite surround the active zone to maximize neutron flux. The core is surrounded by B${_4}$C cylinder that acts as a shield against heat and neutrons radiation. 
+Another Ni-based (hastelloy N) cylinder surrounds the whole core and provides structure and heat protection. The main characteristics of the \gls{SD-TMSR} are listed in Table~\ref{tab:table1}.
+
+\begin{figure} % replace 't' with 'b' to \centering [hbp!]
+	\includegraphics[width=\textwidth]{ff.jpg}
+	\caption{The quarter-core model configuration of the SD-TMSR a) Longitudinal view b) cross-sectional view at the horizontal midplane.}
+	\label{fig:ff}
+\end{figure}
+
+\begin{table}  %[!ht]
+	\caption{The main characteristics of the SD-TMSR \cite{li_optimization_2018}}
+	\vspace{0.1in}
+	\begin{tabularx}{\textwidth}{l | l}
+		\hline
+		Thermal power, MW$_{th}$          				&  2,250  \\ 
+		Fuel salt components                            & LiF-BeF$_2$-(\gls{HM})F$_4$ \\
+		Fuel composition, mole\%                        & 70-17.5-12.5    \\
+		$^7$Li enrichment, \%        				& 99.995   \\
+		Fuel temperature, K 							& 900  \\
+		Fuel density at 900 K, g/cm$^3$		  		& 3.3 \\
+		Fuel dilatation coefficient, g/(cm$^3$ $.$K)  &  -6.7$\times$10$^{-4}$ \\
+		Graphite density, g/cm$^3$             	    & 2.3	\\  
+		B$_4$C density, g/cm$^3$					& 2.52  \\
+		$^{10}$B enrichment, \%						&  18.4  \\
+		Core diameter, cm								& 460  \\
+		Core height, cm									& 460  \\
+		Side length of the graphite hexagonal prism, cm   & 7.5 \\
+		Inner radius, cm							& 3.5  \\
+		Outer radius, cm							& 5  \\
+		Ratio of molten salt and graphite in the inner zone	&  0.357  \\
+		Ratio of molten salt and graphite in the outer zone &  1.162  \\
+		Fuel volume, m$^3$  &	52.9 \\
+		\hline
+	\end{tabularx}
+	\label{tab:table1}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{figure}[t!] % replace 't' with 'b' to \centering
+%	\hspace{+0.65in}
+%	\includegraphics[width=\textwidth]{core.png}
+%	\caption{Plan view of SD-TMSR core.}
+%	\label{fig:core}
+%\end{figure}
+
+\subsection{Fuel composition}
+The general composition of the liquid fuel salt in this work is 70LiF - 17.5BeF$_2$ - 12.5(HM)F$_4$ mole\%, where HM is the heavy metal (i.e. thorium + different fissile materials).
+As previously mentioned, the aim of this paper is to simulate the operation of \gls{SD-TMSR} for a long period of time (60 years) with different initial fissile materials and without any external feed of $^{233}$U. Therefore, five different types of initial fissile materials based on \gls{LEU}, Pu, and \gls{TRU} from LWR SF are investigated as follows:\\
+	(1)low-enriched uranium (LEU) (19.79\%);\\
+	(2)Pu mixed with LEU (19.79\%);\\
+	(3)Pu reactor-grade \cite{marka1993explosive};\\
+	(4)transuranic (TRU) elements from LWR SF \cite{de2000scenarios};\\
+	(5)and $^{233}$U for comparison purpose.\\
+
+The reactor-grade plutonium and \gls{TRU} vector (\%) are summarized in Table~\ref{tab:table2} and ~\ref{tab:table3}, respectively.
+
+\begin{table}  %[!ht]
+	\caption{Reactor-grade plutonium vector \cite{marka1993explosive}}
+	\vspace{0.1in}
+	\begin{tabularx}{\textwidth}{s s s s s}
+		\hline
+		$^{238}$Pu & $^{239}$Pu & $^{240}$Pu & $^{241}$Pu & $^{242}$Pu \\
+		\hline
+		 1.3&60.3&24.3&9.1&5 \\
+		\hline
+	\end{tabularx}
+	\label{tab:table2}
+\end{table}
+
+\begin{table}  %[!ht]
+	\caption{\gls{TRU} vector (\%) \cite{de2000scenarios}}
+	\vspace{0.1in}
+	\begin{tabularx}{\textwidth}{s s s s s s s s s s}
+		\hline
+		$^{237}$Np&$^{238}$Pu & $^{239}$Pu & $^{240}$Pu & $^{241}$Pu & $^{242}$Pu&$^{241}$Am &$^{243}$Am&$^{244}$Cm &$^{245}$Cm\\
+		\hline
+		6.3&2.7&45.9&21.5&10.7&6.7&3.4&1.9&0.8&0.1 \\
+		\hline
+	\end{tabularx}
+	\label{tab:table3}
+\end{table}
+
+The isotopic compositions of plutonium recovered from the spent fuel composition of commercial LEU \gls{PWR} that has released $33$ $GWd/t$ fission energy and has been cooled for $10$ $years$ before reprocessing \cite{oecd1989probabilistic,marka1993explosive}. As well, the isotopic compositions of \gls{TRU} have been taken from the SF of UOX \gls{PWR} (after one use and without multi-recycling) with $60$ $GWd/t$ burnup, and after $5$ $years$ cooling \cite{de2000scenarios}. 
+The molar composition of startup fuel for all five cases is listed in Table~\ref{tab:table4}. Meanwhile, the corresponding initial nuclei inventories with different types of fuel are tabulated in Table~\ref{tab:table5}.
+
+\begin{table}  %[!ht]
+	\caption{Composition of startup fuel mole\%}
+	\vspace{0.1in}
+	\begin{tabularx}{\textwidth}{s s s s s s}
+		\hline
+		Molecule& \gls{LEU} (19.79\%) & Pu mixed with enriched U (19.79 wt-\%) & Pu reactor-grade & \gls{TRU}& $^{233}$U \\
+		\hline
+		LiF&70&70&70&70&70\\
+		BeF$_2$&17.5&17.5&17.5&17.5&17.5\\
+		ThF$_4$&8.25&7.5&10.75&	8.65&12.3		\\
+		UF$_4$&4.25&4.75&&&	0.2		\\
+		PuF$_3$&&0.25&1.75&&		\\
+		TRUF$_3$&&&	&3.85	&\\
+		\hline
+	\end{tabularx}
+	\label{tab:table4}
+\end{table}
+
+\begin{table}  %[!ht]
+	\caption{Initial nuclei inventories (in grams) of the SD-TMSR with different types of fuel.}
+	\vspace{0.1in}
+	\begin{tabularx}{\textwidth}{s s s s s s}
+		\hline
+		\vspace{0.1in}
+		Molecule& \gls{LEU} (19.79\%) & Pu mixed with enriched U (19.79\%) & Pu reactor-grade & \gls{TRU}& $^{233}$U \\
+		\hline
+		$^{232}$Th       &6.24E+07 & 4.67E+07 &   6.75E+07			& 5.44E+07	& 7.69E+07    \\ 
+		$^{233}$U        &         & &        &       &  1.30E+06 \\
+		$^{235}$U        & 3.17E+06 &6.01E+06	&            &   & \\
+		$^{238}$U      	 &1.28E+07  &2.43E+07 &	&  &\\
+		$^{237}$Np	  	 &         && &1.58E+06	&    \\
+		$^{238}$Pu	  	 &         &1.60E+04	& 1.13E+05 & 6.78E+05	&   \\
+		$^{239}$Pu       &         &9.59E+05&6.76E+06& 1.15E+07&    \\
+		$^{240}$Pu       &         &3.99E+05& 2.82E+06&5.40E+06&  	\\  
+		$^{241}$Pu		 &         &1.60E+05&1.13E+06&2.69E+06&   \\
+		$^{242}$Pu		 &         &6.39E+04	&4.51E+05	& 1.68E+06& \\
+		$^{241}$Am		 &         &&& 8.53E+05 & \\
+		$^{242}$Am		 &         &&&  &\\
+		$^{243}$Am       &        & &&4.77E+05&\\
+		$^{244}$Cm		 &        & &&2.01E+05&  \\
+		$^{245}$Cm		 &        & &&			2.51E+04	&   \\
+		&         &&		&		&\\
+		Total mass \\of HM without $^{232}$Th	& 1.60E+07& 3.20E+07&1.13E+07&  2.51E+07&   1.30E+06  \\
+		\hline
+	\end{tabularx}
+\label{tab:table5}
+\end{table}
+
+
+\section{Methodology and tools}
+
+Simulation of Liquid-fueled Molten Salt Reactor (MSR) systems requires computational software that must support online fuel salt reprocessing and refueling \cite{serp2014molten}. In this work, SERPENT-2 version 2.1.31 beta\footnote{SERPENT-2 is a \gls{3D} continuous energy Monte Carlo neutron transport and burn-up code.} \cite{leppanen2014serpent} is used to simulate the full-core of the SD-TMSR with different types of initial fuel. The extension of SERPENT code accounts for continuous online reprocessing and refueling \cite{aufiero2013extended}. Meanwhile, ENDF-VII.0 cross-section library is adopted for all calculations. The results demonstrate full-core runs of 12.5E+06 neutron history per depletion step. The full burnup time of the SD-TMSR was 60 years with statistical error in $k_{eff}$ equal to $\pm$ $36$ $pcm$. The online extraction of \gls{FPs} and noble gases  provides many benefits for MSRs. For example, it would reduce the fissile inventory required to achieve criticality and improve the breeding ratio.
+Figure~\ref{fig:flow} shows a flow chart of the calculation steps. 
+
+\begin{figure}[t!] % replace 't' with 'b' to \centering
+	\includegraphics[width=\textwidth]{flowch.png}
+	\caption{Flow chart of the calculation procedures.}
+	\label{fig:flow}
+\end{figure}
+
+As shown in Figure~\ref{fig:flow}, after launched the input file, an advanced matrix exponential solution based on the Chebyshev Rational Approximation Method (CRAM) \cite{isotalo2016improving} used to solve the Bateman equation. Then, the system extracted gaseous \gls{FPs} and other materials (non-dissolved metals, lanthanides, and soluble metals except Pu) in a proper time\footnote{The extraction time depends on the type of material and its impact on the neutron economy, for instance, the extraction time of the gaseous \gls{FPs} is 30 seconds and for lanthanides and other soluble metals is $\approx$10.59 days in this work.}. This can be done by set the flow rate of gaseous \gls{FPs} and other materials from the fuel to the gas-tank\footnote{An imaginary tank used to store the gaseous \gls{FPs} and the other materials (non-dissolved metals, lanthanides, and soluble metals except protactinium).}. Specifically, protactinium was removed from the fuel with a certain flow rate into the external tank, pa-tank\footnote{An imaginary tank used to store protactinium extracted from the core.}, to decay and produce $^{233}$U\footnote{The $^{233}$Pa is removed and left to decay into $^{233}$U with $\tau_{1/2}$ $\approx$ $27$ $d$.}. The produced $^{233}$U is used as a fresh fissile fuel and the residual $^{233}$U is the net production of $^{233}$U. SERPENT-2 subroutine allows changes the flow rates of the isotopes during reactor operation \cite{aufiero2013extended}. The mass of the fissile and fertile materials needed to achieve criticality is calculated at the end of the cycle (i.e. 1 year). Then, this mass is added to the core at the beginning of the cycle by a certain flow rate.
+
+
+\section{Feed and extraction rates}
+In the present work, two different feed mechanisms are used. The first mechanism allows continuous feed flow of thorium and $^{233}$U from Pa-decay tank. In contrast, the second mechanism adopts continuous feed flow of $^{233}$U from Pa-decay tank and the same composition of the initial fuel except for thorium. \\
+The fission products act as poisons in the MSRs; they negatively impacting the reactivity. Therefore, \gls{FPs} must be extracted during reactor operation. Consider $T_{r}$ as the time during which the total fuel salt is reprocessed and $dN_{e}$ as the amount of particular element $e$ with inventory $N_{e}$ that the \gls{MSR} extracts during time $dt$; thus \cite{nuttin2005potential}
+
+\begin{equation}
+\label{Equ:1}
+\dfrac{dN_{e}}{dt} = N_{e}\dfrac{\varepsilon_{e}}{T_{r}},	
+\end{equation}
+
+where $\varepsilon_{e}$ is the removal efficiency. Equation \ref{Equ:1} gives the removal constant $\lambda_{e}$ $[s^{-1}]$ (the rate at which the material is removed), where $\lambda_{e}=\varepsilon_{e}/T_{r}$. The removal constant $\lambda_{e}$ of gaseous and other fission products is precisely calculated and summarized in Table~\ref{tab:table6}.
+The effective reprocessing time for the gaseous \gls{FPs} and non-dissolved metals was set to 30 seconds (removal constant $\lambda_{e}$ = $-0.0333$ $s^{-1}$), because such elements must be extract promptly and continuously via He bubbling system. In contrast, extracting the soluble \gls{FPs}, lanthanides, and protactinium can be done by the chemical reprocessing (i.e. fluorination and reduction reaction). Therefore, the system reprocesses a specific amount of fuel salt daily. In the present work, the effective extraction time for soluble \gls{FPs} is $\approx$10.59 days ($\lambda_{e}$ = $-1.092\times10^{-6}$ $s^{-1}$), which is equivalent to 5 m$^3$/d of chemical reprocessing rate \cite{nuttin2005potential,li_optimization_2018}. The effective feed rates of the heavy metals (HM) are changed during reactor operation to conserve the total fuel mass and criticality.
+
+
+\begin{table}[ht!]
+	\centering
+	\caption{The reprocessing table.} 
+	\vspace{1ex}
+	\begin{tabularx}{\textwidth}{|p{2.3cm}|p{4.5cm}|s|p{2cm}|}
+		\hline
+		\textbf{Reprocessing group}  & \textbf{Element} & \textbf{Reproc- essing time} & \textbf{Removal constant} $\lambda_{e}$ $[s^{-1}]$ \\
+		\hline
+		Gaseous \gls{FPs} and non-dissolved metals  &  Atomic number (Z) = 1, 2, 7, 8,10, 18, 36, 41, 42, 43, 44, 45, 46, 47, 51, 52, 54, 71, 72, 73, 74, 75, 76,77, 78, 79 and 86.			&	30s	&  -3.333E-02 \\
+		\hline
+		Lanthanides and other soluble \gls{FPs}     & Atomic number (Z) = 30, 31,32, 33, 34, 35, 37, 38, 39, 40, 48, 49, 50, 53, 55, 56, 57, 58, 59, 60, 61,62, 63, 64, 65, 66, 67, 68, 69 and 70. & 10.599 d (5 m$^3$/d) &  -1.092E-06 \\
+		\hline
+		Protactinium   & Pa  &  10.599 d (5 m$^3$/d)  &  -1.092E-06 \\
+		\hline
+	\end{tabularx}
+	\label{tab:table6}
+\end{table}
+
+%\begin{table}[ht!]
+%	\centering
+%	\caption{The refueling table.} 
+%	\vspace{1ex}
+%	\begin{tabularx}{\textwidth}{|p{1.5cm}|b|p{1.9cm}|}
+%		\hline
+%		\textbf{Nuclide} & \textbf{Feed rate} & \textbf{Feed constant$^{\star}$} $\lambda_{e}$ $[s^{-1}]$ \\
+%		\hline
+%		$^{232}$Th        &  1.842 [Kg/day], first 90 [d] & 1.500E-09 \\
+%		&  2.511 [Kg/day], from 90 to 1550 [d] & 		2.045E-09 \\
+%		&  2.456 [Kg/day], from 1550 to 3010 [d] & 		2.000E-09 \\
+%		&  2.321 [Kg/day], from 3010 to 5930 [d]& 		1.890E-09	\\
+%		&  2.241 [Kg/day], from 5930 to 7390 [d] &		1.825E-09	\\
+%		&  2.186 [Kg/day], from 7390 to 12500 [d] &		1.780E-09	\\
+%		&  2.118 [Kg/day], from 12500 to 15420 [d] &	1.725E-09	\\
+%		&  2.136 [Kg/day], from 15420 to 18340 [d]&		1.740E-09		\\
+%		&  2.063 [Kg/day], from 18340 to 21900 [d]&		1.680E-09	 \\ 
+%		\hline
+%		$^{233}$U & 2.619 [Kg/day], first 90 [d]	&   6.400E-09  \\
+%		& 2.009 [Kg/day],  form 90 to 1550 [d] &	4.910E-09 \\
+%		& 1.944 [Kg/day], from 1550 to 3010 [d] &	4.750E-09 \\
+%		& 1.826 [Kg/day],  from 3010 to 5930 [d] &	4.460E-09 \\
+%		& 1.811 [Kg/day],  from 5930 to 7390[d] &	4.425E-09 \\
+%		& 1.744 [Kg/day], from 7390 to 12500 [d] &	4.260E-09 \\
+%		& 1.699 [Kg/day], from 12500 to 18340 [d]	& 4.150E-09 \\
+%		& 1.657 [Kg/day], from 18340 to 21900 [d]	& 4.050E-09 \\
+%		\hline
+%	\end{tabularx}
+%	\begin{tablenotes}
+%		\small
+%		\item  $^{\star}$ Feed constant is the mass fraction of fissile nuclide ($^{232}$Th or $^{233}$U) transferred from the external storage to the core per second.
+%	\end{tablenotes}
+%	\label{tab:table3}
+%\end{table}	
