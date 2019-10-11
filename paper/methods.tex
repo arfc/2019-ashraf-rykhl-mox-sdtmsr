@@ -91,7 +91,7 @@ The reactor-grade plutonium and \gls{TRU} composition are summarized in
 Table~\ref{tab:table2} and ~\ref{tab:table3}, respectively.
 
 \begin{table}  %[!ht]
-	\caption{Reactor-grade plutonium vector \cite{marka1993explosive}}
+	\caption{Reactor-grade plutonium vector (Mass fraction \%) \cite{marka1993explosive}}
 	\vspace{0.1in}
 	\begin{tabularx}{\textwidth}{s s s s s}
 		\hline
@@ -104,7 +104,7 @@ Table~\ref{tab:table2} and ~\ref{tab:table3}, respectively.
 \end{table}
 
 \begin{table}  %[!ht]
-	\caption{\gls{TRU} vector (\%) \cite{de2000scenarios}}
+	\caption{\gls{TRU} vector (Mass fraction \%) \cite{de2000scenarios}}
 	\vspace{0.1in}
 	\begin{tabularx}{\textwidth}{s s s s s s s s s s}
 		\hline
@@ -216,16 +216,24 @@ flow rate of gaseous \gls{FPs} and other materials from the fuel to the
 \gls{FPs} and the other materials (non-dissolved metals, lanthanides, and 
 soluble metals except protactinium).}. Specifically, protactinium was removed 
 from the fuel with a certain flow rate into the external tank, 
-\texttt{pa-decay tank}\footnote{An imaginary tank used to store protactinium 
-extracted from the core.}, to decay and produce $^{233}$U\footnote{The 
+\texttt{pa-decay tank}, to decay and produce $^{233}$U\footnote{The 
 $^{233}$Pa is removed and left to decay into $^{233}$U with $\tau_{1/2}$ 
 $\approx$ $27$ $d$.}. The produced $^{233}$U is used as a fresh fissile fuel 
 and the residual $^{233}$U is the net production of $^{233}$U. The MSR burnup 
 routine provided by SERPENT-2 allows changes the flow rates ($mflow$) of the 
-isotopes during reactor operation \cite{aufiero2013extended}. The mass of the 
-fissile and fertile materials needed to achieve criticality is calculated at 
-the end of the cycle. Then, this mass is added to the core at the beginning of 
-the cycle by a certain flow rate.
+isotopes during reactor operation \cite{aufiero2013extended}. Specifically, we have to determine the mass flow ($mflow$), which is the rate by 
+which elements or nuclides are transferred between materials. After that, the 
+transfer rates should be connected to materials with a reprocessing scheme. 
+Finally, we have to link the reprocessing schemes to depletion histories. In 
+the present work, we adjusted the transfer rates of fresh fuel to maintain core 
+criticality and to keep fuel salt inventory constant during burnup. The feed constant calculation procedures are summarized as follows:
+\begin{enumerate}
+	\item The simulation started without any injection of refueling materials (i.e. with only removing of FPs and Pa).
+	\item After first depletion calculation step, we checked the total mass density of FPs and Pa in \texttt{FP-waste tank} and \texttt{pa-tank}, respectively.
+	\item A simple calculation yields the amount of Th and $^{233}$U that must be added during this cycle (mass of Th $\approx$ mass of extracted FPs and mass of $^{233}$U $\approx$ mass of extracted Pa).
+	\item Dividing this mass by time and inventory of refueling material gave the corresponding feed constant.
+\end{enumerate}
+The cycle calculation ran iteratively until the burnup reached the desired worth.
 
 \section{Feed and extraction rates}
 In the present work, two different feed mechanisms are used. The first 
