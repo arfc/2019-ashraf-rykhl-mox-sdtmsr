@@ -12,15 +12,21 @@
 %%%% packages and definitions (optional)
 \usepackage{placeins}
 \usepackage{booktabs} % nice rules (thick lines) for tables
+\usepackage{longtable}
 \usepackage{microtype} % improves typography for PDF
 \usepackage{hhline}
 \usepackage{amsmath}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
 \usepackage{mathrsfs}
 \usepackage{rotating}
 \usepackage{multirow}
+\usepackage{longtable}
 \usepackage{enumitem}
 \usepackage{mathtools}
 \usepackage{amssymb}
+\usepackage{footnote}
 \usepackage{slashbox}
 \newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
 %\usepackage{adjustbox}
@@ -107,10 +113,9 @@ Monte carlo code
 \FloatBarrier
 \input{acks}
 \FloatBarrier
-\input{Appendix}
-\FloatBarrier
-%\nocite{robertson_conceptual_1971} % placeholder until citations appear
 \bibliographystyle{elsarticle-num}
 \bibliography{2019-Scenarios}
-
+\newpage
+\appendix
+\input{Appendix}
 \end{document}
