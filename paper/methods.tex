@@ -1,4 +1,4 @@
-\section{Model description}
+\section{Model description} \label{Model-description}
 \subsection{Geometry}
 The \gls{SD-TMSR} design model was introduced by the \gls{CAS} as a part of  
 the strategic project ``Future Advanced Nuclear Energy $-$ Thorium-based 
@@ -74,7 +74,7 @@ characteristics of the \gls{SD-TMSR} are listed in Table~\ref{tab:table1}.
 The general composition of the liquid fuel salt in this work is 70LiF - 
 17.5BeF$_2$ - 12.5(HM)F$_4$ mole\%, where HM is the heavy metal (mixture of 
 thorium and other actinides). The aim of this paper is to simulate the  
-operation of \gls{SD-TMSR} for 60 years with different startup fissile 
+operation of \gls{SD-TMSR} for 60 years with different start-up fissile 
 compositions and without any external feed of fissile $^{233}$U which we 
 assumed is unavailable. For that reason, five different types of initial 
 fissile materials based on \gls{LEU}, Pu, and \gls{TRU} from LWR SF were 
@@ -123,12 +123,12 @@ reprocessing \cite{oecd1989probabilistic,marka1993explosive}. Similarly, the
 isotopic compositions of \gls{TRU} was taken for the SF of UOX \gls{PWR} 
 (after one use, no multi-recycling) with the average discharge $60$ 
 $GWd/t$ burnup, and after $5$ years of cooling \cite{de2000scenarios}. 
-The molar composition of startup fuel for all five cases is listed in 
+The molar composition of start-up fuel for all five cases is listed in 
 Table~\ref{tab:table4}. Meanwhile, the corresponding initial nuclei 
 inventories with different types of fuel are summarized in 
 Table~\ref{tab:table5}.
 \begin{table}  %[!ht]
-	\caption{Composition of startup fuel (mole\%)}
+	\caption{Composition of start-up fuel (mole\%)}
 	\vspace{0.1in}
 	\begin{tabularx}{\textwidth}{p{0.16\textwidth} X p{0.17\textwidth} 
 	p{0.14\textwidth} X X}
@@ -178,7 +178,7 @@ Table~\ref{tab:table5}.
 \end{table}
 
 
-\section{Methodology and tools}
+\section{Methodology and tools} \label{Methodology-and-tools}
 
 Simulation of Liquid-fueled Molten Salt Reactor (MSR) systems requires 
 computational software that must support online fuel salt reprocessing and 
@@ -235,7 +235,7 @@ criticality and to keep fuel salt inventory constant during burnup. The feed con
 \end{enumerate}
 The cycle calculation ran iteratively until the burnup reached the desired worth.
 
-\section{Feed and extraction rates}
+\section{Feed and extraction rates} \label{Feed-and-extraction-rates}
 In the present work, two different feed mechanisms are used. The first 
 mechanism allows continuous feed flow of thorium from Th stockpile, and 
 $^{233}$U from \texttt{pa-decay tank}. In contrast, the second mechanism 
@@ -268,7 +268,7 @@ $\approx$10.59 days ($\lambda_{e}$ = $-1.092\times10^{-6}$ $s^{-1}$), which is
 equivalent to 5 m$^3$/d of chemical reprocessing rate 
 \cite{nuttin2005potential,li_optimization_2018}. The effective feed rates of 
 the heavy metals (HM) are changed during reactor operation to conserve the 
-total fuel mass and criticality.
+total fuel mass and criticality. The effective feed rates for Th/$^{233}$U, Pu reactor-grade and TRU cases are listed in Table~\ref{tab:table8}, \ref{tab:table9} and \ref{tab:table10} in Appendix.
 
 
 \begin{table}[ht!]
