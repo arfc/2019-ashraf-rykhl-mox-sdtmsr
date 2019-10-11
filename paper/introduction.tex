@@ -25,17 +25,17 @@ ratio \cite{nuttin2005potential,li_optimization_2018}.
 Historically, the thermal-spectrum \gls{MSR} was designed for the Th/$^{233}$U
 fuel cycle \cite{rykhlevskii2019modeling,nuttin2005potential,
 	merle2004scenarios,rosenthal1970molten}. This design assumes that we have
-fissile $^{233}$U inventory to startup new \glspl{MSR}. But $^{233}$U does not
+fissile $^{233}$U inventory to start-up new \glspl{MSR}. But $^{233}$U does not
 exist in the Earth's crust and can be produced from fertile $^{232}$Th only in
 the nuclear reactor. Therefore, it is required to examine alternative fissile
-materials (e.g., $^{235}$U) to replace the $^{233}$U in the startup fuel
+materials (e.g., $^{235}$U) to replace the $^{233}$U in the start-up fuel
 composition \cite{betzler2016modeling,zou2018transition}. The thorium fuel
 cycle transition can be achieved after reaching the doubling
 time\footnote{Time required to produce enough amount of $^{233}$U to trigger a
-	new SD-TMSR.} of $^{233}$U because in this case all startup fissile material
+	new SD-TMSR.} of $^{233}$U because in this case all start-up fissile material
 is being substituted by newly produced $^{233}$U.
 
-Betzler \emph{et al.} discussed the simulation of the startup of a MSBR unit
+Betzler \emph{et al.} discussed the simulation of the start-up of a MSBR unit
 cell with \gls{LEU} (19.79\%) and Pu from \gls{LWR} spent fuel (SF) as initial
 fissile materials \cite{betzler2016modeling}. They concluded that the 
 plutonium vector extracted from LWR SF is the best alternative source to 
@@ -49,7 +49,7 @@ In contrast, the second approache tends to store produced $^{233}$U out of the
 core until there is enough amount to start a new TMSR \cite{zou2018transition}.
 Additionally, Zou \emph{et al.} studied the transitioning to thorium fuel
 cycle in a small modular Th-based molten salt reactor (smTMSR) using \gls{TRU}
-as startup fuel. They concluded that the transition to thorium fuel cycle can
+as start-up fuel. They concluded that the transition to thorium fuel cycle can
 be achieved in thermal smTMSR with a proper fuel fraction 
 \cite{zou2018preliminary}.
 
@@ -78,10 +78,10 @@ initial fissile materials: \gls{LEU}, Pu mixed with \gls{LEU}, Pu reactor-grade,
 All calculations presented in the present paper were performed using SERPENT-2 version 2.1.30. We used the MSR burnup routine provided by SERPENT-2 to simulate continuous online reprocessing and refueling. SERPENT-2 uses an internal calculation routine for solving the set of Bateman equations describing the changes in the material compositions caused by neutron-induced reactions and radioactive decay \cite{leppanen2014serpent}. Additionally, SERPENT-2 allows us to conduct the burnup calculations on computer clusters with multiple cores using distributed-memory MPI parallelization.
 
 This present paper is organized as follows: after an introduction about 
-\gls{MSR} systems, the model description is discussed in section 2. 
-Methodology and tools is descried in section 3. Extraction and feed mechanisms 
-are addressed in section 4. Section 5 focuses on the results and discussion. 
-Finally, section 6 highlights the conclusions.
+\gls{MSR} systems, the model description is discussed in section \ref{Model-description}. 
+Methodology and tools is descried in section \ref{Methodology-and-tools}. Extraction and feed mechanisms 
+are addressed in section  \ref{Feed-and-extraction-rates}. Section \ref{Results-and-discussion} focuses on the results and discussion. 
+Finally, section \ref{Conclusion} highlights the conclusions.
 
 %produce enough amount of $^{233}$U to start a new \gls{SD-TMSR}.
 %Therefore, the aim of this paper is to operate the \gls{SD-TMSR} for a long 
