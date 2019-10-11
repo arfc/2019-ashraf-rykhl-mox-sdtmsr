@@ -1,8 +1,6 @@
 \section{Introduction}
 The \gls{GIF} has defined eight technology goals for the next generation
-nuclear systems. These goals are: safety and reliability, economics,
-sustainability, non-proliferation and physical protection
-\cite{doe2002technology}. The \gls{MSR} has many advantages that consistent
+nuclear systems. These goals have been defined in four broad areas: safety and reliability, economics, sustainability, non-proliferation and physical protection \cite{doe2002technology}. The \gls{MSR} has many advantages that consistent
 with \gls{GIF}'s goals, for example, liquid fuel, inherent safety, online
 reprocessing and refueling, excellent neutron economy and operation near
 atmospheric
@@ -56,8 +54,7 @@ be achieved in thermal smTMSR with a proper fuel fraction
 \cite{zou2018preliminary}.
 
 Heuer \emph{et al.} discussed the transition characteristics of the \gls{MSFR}
-under different launching scenarios (e.g., enriched uranium and TRU)
-\cite{heuer2014towards}.
+under different launching scenarios (e.g., enriched uranium and TRU) they concluded that starting the Thorium fuel cycle is feasible while closing the current fuel cycle and adopting stockpile incineration in MSRs for optimizing the long-term waste management \cite{heuer2014towards}.
 
 Indeed, there are various researches that revolve around starting the
 \glspl{MSR} with fissile materials alternative to $^{233}$U. Many of these
@@ -71,15 +68,14 @@ the main object of the present paper is to discuss the simulation of the
 \gls{SD-TMSR} operation for a lifetime-long period of time (60 years) with
 different initial fissile materials and without any external feed of $^{233}$U
 to achieve the thorium fuel cycle transition. We investigated five different
-initial fissile materials: \gls{LEU}, Pu, and \gls{TRU} from LWR SF
-\cite{de2000scenarios}. Moreover, two different feed scenarios were selected:
+initial fissile materials: \gls{LEU}, Pu mixed with \gls{LEU}, Pu reactor-grade, \gls{TRU} from LWR SF and $^{233}$U \cite{de2000scenarios}. Moreover, two different feed scenarios were selected:
+
 \begin{itemize}
-	\item Continuous feed flow of thorium and $^{233}$U from \texttt{Pa-decay 
-	tank}, where the removal rate of $^{233}$Pa = feed rate of $^{233}$U. 
-	\cite{betzler2016modeling}.
-	\item Continuous feed flow of (Heavy Metal (HM) except for Th) + all or 
-	part of $^{233}$U from \texttt{Pa-decay tank}.
+	\item Continuous feed flow of thorium from Th stockpile and $^{233}$U from \texttt{Pa-decay tank}\footnote{An imaginary tank used to store protactinium extracted from the core.}, where the removal rate of $^{233}$Pa = feed rate of $^{233}$U. \cite{betzler2016modeling}.
+	\item Continuous injection of Heavy Metal (HM) (excluding Th) and simultaneously feed of all or part of produced $^{233}$U from \texttt{Pa-decay tank}.
 \end{itemize}
+
+All calculations presented in the present paper were performed using SERPENT-2 version 2.1.30. We used the MSR burnup routine provided by SERPENT-2 to simulate continuous online reprocessing and refueling. SERPENT-2 uses an internal calculation routine for solving the set of Bateman equations describing the changes in the material compositions caused by neutron-induced reactions and radioactive decay \cite{leppanen2014serpent}. Additionally, SERPENT-2 allows us to conduct the burnup calculations on computer clusters with multiple cores using distributed-memory MPI parallelization.
 
 This present paper is organized as follows: after an introduction about 
 \gls{MSR} systems, the model description is discussed in section 2. 
