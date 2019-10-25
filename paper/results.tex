@@ -233,12 +233,12 @@ fuel is listed in Table~\ref{tab:comp_feeds}.
 
 \subsection{Neutron spectrum}
 Figure~\ref{fig:spectrumFLUX110vC} represents the neutron flux per unit 
-lethargy for a full-core SD-TMSR model in the energy range from 10$^{-8}$ to 10 
-MeV for the $^{233}$U, reactor-grade Pu, and TRU cases at BOL and EOL. In the $^{233}$U 
-case, at the EOL, the neutron spectrum is harder than at BOL due to the 
-accumulation of Pu and other strong thermal neutron absorbers in the fuel 
-salt. For the reactor-grade Pu and TRU cases, during reactor operation, the 
-fissile Pu is depleted and the $^{233}$U becomes the major fissile isotope 
+lethargy for a full-core SD-TMSR model in the energy range from 10$^{-8}$ to 
+10 MeV for the $^{233}$U, reactor-grade Pu, and TRU cases at BOL and EOL. In 
+the $^{233}$U case, at the EOL, the neutron spectrum is harder than at BOL due 
+to the accumulation of Pu and other strong thermal neutron absorbers in the 
+fuel salt. For the reactor-grade Pu and TRU cases, during reactor operation, 
+the fissile Pu is depleted and the $^{233}$U becomes the major fissile isotope 
 (see Figure~\ref{fig:U233CC}); the neutron spectrum softens and becomes 
 similar to the initial thermal spectrum of a $^{233}$U fueled \gls{SD-TMSR}.
  \begin{figure}
@@ -249,19 +249,18 @@ similar to the initial thermal spectrum of a $^{233}$U fueled \gls{SD-TMSR}.
  	\label{fig:spectrumFLUX110vC}
 \end{figure}
 
-
 \subsection{Neutron flux}
-Figures~\ref{fig:fast_flux}, \ref{fig:thermal_flux} show the radial 
+Figures~\ref{fig:fast_flux} and \ref{fig:thermal_flux} show the radial 
 distribution of fast (energy range between 0.625 eV and 20 MeV) and thermal 
 (energy range between 10$^{-5}$ eV and 0.625 eV) neutron flux for three 
 different initial fissile materials in the fuel salt ($^{233}$U, reactor-grade 
-plutonium, TRU) at startup and at equilibrium (after $\approx 30$ years of 
-operation). Actinides evolution and poisonous fission product accumulation 
-for various initial fissile compositions demonstrated the different effects on 
-the SD-TMSR neutronics performance. For the $^{233}$U case, the thermal neutron 
-flux is suppressed at the equilibrium because fissile $^{233}$U in the core is 
-being substituted with heavier fissile actinides: $^{235}$U, $^{239}$Pu, and 
-$^{241}$Pu. This is in good agreement with results in the literature 
+Pu, TRU) at startup and at equilibrium (after $\approx 30$ years of 
+operation). Actinides' evolution and poisonous fission product accumulation 
+for various initial fissile compositions demonstrates the different effects on 
+the SD-TMSR neutronics performance. For the $^{233}$U case, the thermal 
+neutron flux is suppressed at equilibrium because fissile $^{233}$U in the 
+core is being substituted with heavier fissile actinides: $^{235}$U, 
+$^{239}$Pu, and $^{241}$Pu. This agrees with results in literature 
 \cite{rykhlevskii2019modeling, ashraf2019whole_core}.
 \begin{figure}[htp!] % replace 't' with 'b' to force it to \centering
 	\includegraphics[width=\textwidth]{radial_fast_flux_init_vs_eq.png} 
@@ -271,14 +270,13 @@ $^{241}$Pu. This is in good agreement with results in the literature
 	\label{fig:fast_flux}
 \end{figure}
 
-Opposite behavior was observed for the Pu reactor-grade and TRU cases. For 
-these cases, the thermal neutron flux is increasing during operation while 
-fast neutron flux is decreasing. Fissile plutonium nuclides (generate 
-relatively hard spectrum) from initial fuel salt composition is gradually 
-substituted with the $^{233}$U (generates relatively soft spectrum), produced 
-from the fertile $^{232}$Th. During reactor operation, the $^{233}$U becomes 
-primary fissile isotope, which leads to the neutron spectrum softening of the 
-reactor. 
+Opposite behavior is observed for the reactor-grade Pu and TRU cases. For  
+these cases, the thermal neutron flux increases during operation while fast 
+neutron flux decreases. Fissile Pu nuclides (generate relatively hard 
+spectrum) from initial fuel salt composition are gradually substituted with  
+$^{233}$U (generates relatively soft spectrum), produced from fertile 
+$^{232}$Th. During reactor operation, $^{233}$U becomes the primary fissile 
+isotope, which softening the neutron spectrum of the reactor. 
 \begin{figure}[htp!] % replace 't' with 'b' to force it to \centering
 	\includegraphics[width=\textwidth]{radial_thermal_flux_init_vs_eq.png} 
 	\caption{Radial thermal neutron flux distribution for 3 different initial 
@@ -287,20 +285,20 @@ reactor.
 	\label{fig:thermal_flux}
 \end{figure}
 
-Notably, more changes in thermal neutron flux shape and magnitude for the 
-$^{233}$U case were observed in the inner core zone ($R\lesssim150$) than 
-in the outer core zone. In contrast, for Pu reactor-grade and TRU cases, 
-significant changes were observed for thermal neutron flux in the outer core 
+More changes in thermal neutron flux shape and magnitude for the 
+$^{233}$U case are observed in the inner core zone ($R\lesssim150$) than 
+in the outer core zone. In contrast, for the reactor-grade Pu and TRU cases, 
+significant changes are observed for thermal neutron flux in the outer core 
 zone and reflector. Additionally, Figure~\ref{fig:thermal_flux} shows 
 relatively large changes in thermal flux leakage from the core for the Pu and 
-TRU cases. Overall, the SD-TMSR core design was optimized for $^{233}$U 
-fissile isotope \cite{li_optimization_2018}; thus, the core geometry (e.g., 
-fuel channels lattice pitch) must be re-optimized for another type of fuel to 
-obtain better neutronics performance.
+TRU cases. The SD-TMSR core design was optimized for $^{233}$U  
+\cite{li_optimization_2018}; thus, the core geometry (e.g., channels lattice 
+pitch) must be re-optimized for another type of fuel to obtain better 
+neutronics performance.
 
 \subsection{Temperature coefficient of reactivity}
 The temperature coefficient of reactivity quantifies reactivity changes due to 
-temperature increase in the core and was calculated in this work as follows:
+temperature increase in the core and is calculated in this work as follows:
 \begin{align}
 \alpha &= \frac{k_{eff}(T_{i+1}) - k_{eff}(T_i)}{k_{eff}(T_{i+1}) 
 	k_{eff}(T_{i}) (T_{i+1} - T_i)}
@@ -310,9 +308,9 @@ T_i &= \mbox{fuel salt temperature in (900 K, 1000 K).} \nonumber
 \end{align}
 
 Table~\ref{tab:tcoe} summarizes temperature coefficients calculated for three 
-different initial fissile loads at the startup and at the equilibrium. By 
-propagating the $k_{eff}$ statistical error provided by SERPENT-2, 
-uncertainty for each temperature coefficient was calculated using formula:
+different initial fissile loads at startup and at equilibrium. By propagating 
+the $k_{eff}$ statistical error provided by SERPENT-2, uncertainty for each 
+temperature coefficient is calculated using the following formula:
 \begin{align}
 \delta\alpha &= \abs{\frac{1}{T_{i+1} - T_i}} \sqrt{\frac{\delta 
 		k_{eff}^2(T_{i+1})}{k_{eff}^4(T_{i+1})}  
@@ -322,9 +320,9 @@ uncertainty for each temperature coefficient was calculated using formula:
 output.} 
 \nonumber
 \end{align}
-Notably, other sources of uncertainty are neglected, such as cross section 
-measurement error and approximations inherent in the density dependence on 
-temperature. 
+
+Other sources of uncertainty are neglected, such as cross section measurement 
+error and approximations inherent in the density dependence on temperature. 
 
 When the fuel salt temperature increases, the density of the salt decreases, 
 but at the same time, the total volume of fuel salt in the 
@@ -336,8 +334,8 @@ space for the salt. The cross section temperatures for the fuel and moderator
 were changed from 900 to 1000 K to determine the temperature coefficients. 
 This work considered five different cases:
 \begin{enumerate}
-	\item Fuel salt temperature (Doppler Effect) rising from 900 to 1000 K 
-	(first row  in Table~\ref{tab:tcoe}).
+	\item Fuel salt temperature (Doppler Effect) rising from 900 to 1000 K 	
+	(first row in Table~\ref{tab:tcoe}).
 	\item Fuel salt density decreasing from 3.3 to 3.233 g/cm$^3$ 
 	(density change caused by temperature increase from	900 to 1000 K).
 	\item Total fuel salt temperature (Doppler+density) rising from 900 to 
@@ -350,10 +348,10 @@ In the first case, the fuel temperature change only impacts cross section
 temperature. In the second case, changes in the fuel temperature only impact 
 density, and the third case takes into account both effects. The geometry for 
 these three cases is unchanged because the fuel is a liquid. However, when 
-the graphite blocks heat up, both the density and the geometry changing due 
+the graphite blocks heat up, both the density and the geometry change due 
 to the thermal expansion of solid graphite. The graphite linear thermal 
 expansion is not a dominating factor \cite{li_optimization_2018}, and herein 
-we focus only on Doppler Effect for the moderator temperature coefficient.
+we focus only on the Doppler Effect for the moderator temperature coefficient.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table} [b!]
 	\caption{Temperature coefficients of reactivity for 3 different initial 
@@ -381,43 +379,43 @@ we focus only on Doppler Effect for the moderator temperature coefficient.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The \gls{FTC} is negative for all considered fuel compositions due to thermal 
-Doppler broadening of the resonance capture cross sections in the thorium. For the 
-$^{233}$U case, the \gls{FTC} decreases in magnitude by $-25\%$ due to neutron 
-spectrum hardening during the reactor operation. For Pu reactor-grade and TRU 
-cases, the \gls{FTC} becomes more negative at the equilibrium, by $+31\%$ and 
-$+14\%$, respectively. Spectrum softening for these fueling cases positively 
-affects the \gls{FTC} magnitude, and this effect seems to be proportional to 
-the spectrum shift.
+Doppler broadening of the resonance capture cross sections in the thorium. For 
+the $^{233}$U case, the \gls{FTC} decreases in magnitude by $25\%$ due to 
+neutron spectrum hardening during the reactor operation. For reactor-grade Pu 
+and TRU cases, the \gls{FTC} increases in magnitude at equilibrium, by $31\%$ 
+and $14\%$, respectively. Spectrum softening for these fueling cases 
+positively affects the \gls{FTC} magnitude, and this effect seems to be 
+proportional to the spectrum shift.
 
 The \gls{MTC} for the $^{233}$U case is positive and decreases during reactor 
 operation because of spectrum hardening with fuel depletion. For other cases, 
-the \gls{MTC} is negative and also decreasing in magnitude during the reactor 
+the \gls{MTC} is negative and also decreases in magnitude during reactor  
 operation. Finally, the total temperature coefficient of reactivity is 
 strongly negative for all considered scenarios but decreases in magnitude 
 during reactor operation due to spectral shift. Notably, the total temperature 
-coefficient is the most negative for the Pu reactor-grade case at startup, 
+coefficient is the most negative for the reactor-grade Pu case at startup, 
 which has the hardest neutron spectrum (Figure~\ref{fig:spectrumFLUX110vC}). 
-These coefficients agree with earlier estimates for SD-TMSR 
+These coefficients agree with earlier estimates for the SD-TMSR 
 \cite{li_optimization_2018, ashraf2019whole_core} and \gls{MSBR} 
-\cite{rykhlevskii2019modeling,  
-rykhlevskii_full-core_2017,robertson_conceptual_1971}.
+\cite{rykhlevskii2019modeling, rykhlevskii_full-core_2017,  
+robertson_conceptual_1971}.
 
 Even after 30 years of operation, the total temperature coefficient of 
 reactivity remains relatively large and negative (in the range between $-2.59$ 
-and $-5.06$ pcm/K) comparing with the conventional \gls{PWR}, which has 
+and $-5.06$ pcm/K) compared to the conventional \gls{PWR}, which has 
 temperature coefficient of about $-1.71$ $pcm/^{\circ}F\approx -3.08$ $pcm/K$ 
-\cite{forget_integral_2018}), and allows excellent reactor stability and 
+\cite{forget_integral_2018}, and allows excellent reactor stability and 
 control. The additional analysis must be performed taking graphite moderator 
 density change and linear thermal expansion into account, but material 
 properties for the SD-TMSR graphite are not available in published literature. 
-Alternatively, relatively well-studied reactor graphite (e.g., AXQ graphite 
+Relatively well-studied reactor graphite (e.g., AXQ graphite 
 \cite{robertson_conceptual_1971}) can be considered as a candidate for the 
 SD-TMSR concept.
 
 \subsection{Six factor analysis}
 The effective multiplication factor can be expressed as follows:
 \begin{align}
-k_{eff} &= k_{inf} P_f  P_t = \eta f p \epsilon P_f P_t
+k_{eff} &= \eta f p \epsilon P_f P_t
 \intertext{where}
 \eta     &= \mbox{thermal fission factor} \nonumber \\
 f        &= \mbox{thermal utilization factor} \nonumber \\
@@ -429,14 +427,14 @@ P_t      &= \mbox{thermal non-leakage probability.} \nonumber
 
 Table~\ref{tab:six_factor} summarizes the six factors for 3 different initial 
 fuel salt compositions at startup and equilibrium. By using SERPENT-2 built-in 
-online reprocessing capabilities, all six factors have been calculated at the 
+online reprocessing capabilities, all six factors are calculated at the 
 beginning of the operation and after 30 years of operation. Neutron population 
 and number of active/inactive cycles were selected to obtain $k_{eff}$ 
 statistical uncertainty less than 12 pcm. The fast and thermal non-leakage 
-probabilities  remain constant regardless of initial fissile material and 
+probabilities remain constant regardless of initial fissile material and 
 neutron spectrum shift during operation. The thermal utilization factor (f) 
-remains almost constant during operation for $^{233}$U and TRU cases but 
-considerably declines for Pu case due to significant neutron spectrum 
+remains almost constant during operation for the $^{233}$U and TRU cases but 
+considerably declines for the Pu case due to significant neutron spectrum 
 softening.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table} [ht!]
@@ -461,17 +459,16 @@ softening.
 
 In contrast, the neutron reproduction factor ($\eta$), resonance escape 
 probability ($p$), and fast fission factor ($\epsilon$) differ notably between 
-initial and equilibrium state for all three initial fissile materials. The 
-fast fission factor ($\epsilon$) is much larger at startup for Pu and TRU 
-cases because these initial fissile materials provided a much harder neutron 
-spectrum than $^{233}$U, and $\epsilon$ grows throughout the core's lifetime. 
-Conversely, the resonance escape probability decreases during reactor 
-operation. The thermal fission factor increases during reactor operation for 
-the $^{233}$U as initial fuel due to the accumulation of fissile plutonium 
-isotopes, which produce more neutrons per fission ($\nu$). The other two 
-scenarios demonstrated opposite behavior: plutonium isotopes with large 
-neutrons per fission production ($\nu$) are gradually substituted with the 
-$^{233}$U, which has lower $\nu$ \cite{sjostrand_cross_1960}. This six 
-factors' evolution agrees with previously determined evolution parameters for 
-a similar single-fluid double-zone \gls{MSBR} \cite{ashraf2019whole_core, 
+the initial and equilibrium state for all three initial fissile materials.  
+$\epsilon$ is much larger at startup for the Pu and TRU cases because these 
+initial fissile materials provide a much harder neutron spectrum than 
+$^{233}$U, and $\epsilon$ grows throughout the core's lifetime. Conversely, 
+$p$ decreases during reactor operation. The thermal fission factor ($\eta$)  
+increases during reactor operation for the $^{233}$U as initial fuel due to 
+the accumulation of fissile plutonium isotopes, which produce more neutrons 
+per fission ($\nu$). The other two scenarios demonstrate opposite behavior: 
+plutonium isotopes with large $\nu$ are gradually substituted with $^{233}$U, 
+which has a lower $\nu$ \cite{sjostrand_cross_1960}. This six factors' 
+evolution agrees with previously determined evolution parameters for a similar 
+single-fluid double-zone \gls{MSBR} \cite{ashraf2019whole_core, 
 rykhlevskii2019modeling, park_whole_2015}.
