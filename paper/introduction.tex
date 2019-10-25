@@ -1,23 +1,23 @@
-\section{Introduction}
-The \gls{GIF} has defined eight technology goals for the next generation
-nuclear systems. These goals have been defined in four broad areas: safety and reliability, economics, sustainability, non-proliferation and physical protection \cite{doe2002technology}. The \gls{MSR} has many advantages that consistent
-with \gls{GIF}'s goals, for example, liquid fuel, inherent safety, online
-reprocessing and refueling, excellent neutron economy and operation near
+\section{Introduction} \label{Introduction}
+The \gls{GIF} defines eight technological goals for the next generation
+nuclear systems. These goals are defined in four broad areas: safety and reliability, non-proliferation and physical protection, economics, and sustainability \cite{doe2002technology}. The \gls{MSR} has many advantages that agree
+with \gls{GIF}'s goals, like: liquid fuel, inherent safety, online
+reprocessing and refueling, excellent neutron economy, and operation near
 atmospheric
 pressure in a primary loop \cite{siemer2015molten,rosenthal1970molten}.
-Thus, the \gls{GIF} selected \gls{MSR} as one of the promising Generation-IV
+Thus, the \gls{GIF} selected the \gls{MSR} as one of the promising Generation-IV
 reactors \cite{doe2002technology,pioro2016handbook}.
-In the \gls{MSR}, the fuel is dissolved in a molten salt (e.g., LiF or NaCl).
-This liquid fuel salt (e.g., LiF-BeF$_2$-ThF$_4$-$^{233}$UF$_4$) constantly
-circulates through the core and allows transferring fission heat from reactor
-core to \glspl{IHX}.
+In the \gls{MSR}, the fuel is dissolved in a molten salt (e.g., LiF or NaCl);
+this liquid fuel salt (e.g., LiF-BeF$_2$-ThF$_4$-$^{233}$UF$_4$) constantly
+circulates through the core and allows fission heat to transfer from the reactor
+core to intermediate heat exchanger.
 
-The Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR-2,250
-MW$_{th}$) was introduced by the \gls{CAS} \cite{li_optimization_2018}. The
+The Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR) 2,250
+MW$_{th}$ was introduced by the Chinese Academy of Sciences \cite{li_optimization_2018}. The
 SD-TMSR
 is a graphite-moderated thermal-spectrum \gls{MSR} operating in Th/$^{233}$U
 fuel cycle. In the SD-TMSR the fissile and fertile elements are integrated
-into the same salt. In addition, the active core is divided into two zones,
+into the same salt. The active core is divided into two zones;
 the radius of the fuel channels in the outer zone is modified to be larger
 than the radius of the fuel channels in the inner zone to improve the breeding
 ratio \cite{nuttin2005potential,li_optimization_2018}.
@@ -25,63 +25,59 @@ ratio \cite{nuttin2005potential,li_optimization_2018}.
 Historically, the thermal-spectrum \gls{MSR} was designed for the Th/$^{233}$U
 fuel cycle \cite{rykhlevskii2019modeling,nuttin2005potential,
 	merle2004scenarios,rosenthal1970molten}. This design assumes that we have
-fissile $^{233}$U inventory to startup new \glspl{MSR}. But $^{233}$U does not
-exist in the Earth's crust and can be produced from fertile $^{232}$Th only in
-the nuclear reactor. Therefore, it is required to examine alternative fissile
-materials (e.g., $^{235}$U) to replace the $^{233}$U in the startup fuel
+fissile $^{233}$U inventory to start up new \glspl{MSR}. However, $^{233}$U does not
+exist in the Earth's crust and can only be produced from fertile $^{232}$Th in 
+specific nuclear facilities. Therefore, we examine alternative fissile
+materials to replace the $^{233}$U in the startup fuel
 composition \cite{betzler2016modeling,zou2018transition}. The thorium fuel
 cycle transition can be achieved after reaching the doubling
 time\footnote{Time required to produce enough amount of $^{233}$U to trigger a
-	new SD-TMSR.} of $^{233}$U because in this case all startup fissile material
+	new SD-TMSR.} of $^{233}$U because in this case, all startup fissile material
 is being substituted by newly produced $^{233}$U.
 
-Betzler \emph{et al.} (2016), discussed the simulation of the startup of a MSBR unit
+Betzler \emph{et al.} (2016) discussed the simulation of the startup of a \gls{MSBR} unit
 cell with \gls{LEU} (19.79\%) and Pu from \gls{LWR} spent nuclear fuel (SNF) as initial
 fissile materials \cite{betzler2016modeling}. They concluded that the 
-plutonium vector extracted from LWR SNF is the best alternative source to 
-$^{233}$U because it has high ratio of fissile isotopes
-\cite{betzler2016modeling}. Zou \emph{et al.} (2018), introduced two approaches for
-the thorium fuel cycle transition in \gls{TMSR}: (1) in-core transition and 
+Pu vector extracted from LWR SNF is the best alternative source to 
+$^{233}$U because it has a high ratio of fissile isotopes
+\cite{betzler2016modeling}. Zou \emph{et al.} (2018) introduced two approaches for
+the thorium fuel cycle transition in the \gls{TMSR}: (1) in-core transition and 
 (2) ex-core transition. In the first approach, the TMSR is launched with 
 existing fissile material and thorium as a fertile material; then the 
 $^{233}$U bred from thorium is rerouted into the core to maintain criticality. 
-In contrast, the second approache tends to store produced $^{233}$U out of the 
-core until there is enough amount to start a new TMSR \cite{zou2018transition}.
-Additionally, Zou \emph{et al.} (2018), studied the transitioning to thorium fuel
-cycle in a small modular Th-based molten salt reactor (smTMSR) using \gls{TRU}
-as startup fuel. They concluded that the transition to thorium fuel cycle can
-be achieved in thermal smTMSR with a proper fuel fraction 
+In contrast, the second approach tends to store produced $^{233}$U out of the 
+core until there is enough to start a new TMSR \cite{zou2018transition}.
+Zou \emph{et al.} (2018) studied the transitioning to thorium fuel
+cycle in a small modular Thorium-based Molten Salt Reactor (smTMSR) using \gls{TRU}
+as startup fuel. They concluded that the transition to the thorium fuel cycle can
+be achieved in a thermal smTMSR with a proper fuel fraction 
 \cite{zou2018preliminary}.
 
-Heuer \emph{et al.} (2014), discussed the transition characteristics of the \gls{MSFR}
-under different launching scenarios (e.g., enriched uranium and TRU) they concluded that starting the thorium fuel cycle is feasible while closing the current fuel cycle and adopting stockpile incineration in MSRs for optimizing the long-term waste management \cite{heuer2014towards}.
+Heuer \emph{et al.} (2014) discussed the transition characteristics of the \gls{MSFR}
+under different launching scenarios (e.g., enriched uranium and TRU); they concluded that starting the thorium fuel cycle is feasible while closing the current fuel cycle and adopting stockpile incineration in MSRs for optimizing the long-term waste management \cite{heuer2014towards}.
 
-Indeed, there are various researches that revolve around starting the
+There are various researches that revolve around starting the
 \glspl{MSR} with fissile materials alternative to $^{233}$U. Many of these
 researches focus on the fast-spectrum \glspl{MSR} \cite{heuer2014towards,ashraf2019modeling,
 	ashraf2018nuclear, rykhlevskii_fuel_2019, betzler_impacts_2019,
-	fiorina2013investigation}, while little focus on
+	fiorina2013investigation}, while few focus on
 thermal-spectrum \glspl{MSR} \cite{betzler2016modeling,
-	zou2018transition,zou2018preliminary}. Nevertheless, simulating the operation of the \gls{SD-TMSR} concept with other
-fissile materials (except $^{233}$U) was not studied before. Therefore,
+	zou2018transition,zou2018preliminary}. Simulating the operation of the \gls{SD-TMSR} concept with other
+fissile materials (except $^{233}$U) has not been studied before. Therefore,
 the main objective of the present paper is to discuss the simulation of the
 \gls{SD-TMSR} operation for a lifetime-long period of time (60 years) with
 different initial fissile materials and without any external feed of $^{233}$U
-to achieve the thorium fuel cycle transition. We investigated five different
-initial fissile materials: \gls{LEU}, Pu mixed with \gls{LEU}, Pu reactor-grade, \gls{TRU} from LWR SNF and $^{233}$U \cite{de2000scenarios}. Moreover, two different feed mechanisms were selected:
+to achieve the thorium fuel cycle transition. We investigate five different
+initial fissile materials: \gls{LEU}, Pu mixed with \gls{LEU}, reactor-grade Pu, \gls{TRU} from LWR SNF, and $^{233}$U \cite{de2000scenarios}. Two different feed mechanisms were selected:
 
 \begin{itemize}
-	\item Thorium feed mechanism: continuous feed flow of thorium from Th stockpile and $^{233}$U from \texttt{Pa-decay tank}\footnote{An imaginary tank used to store protactinium extracted from the core.}, where the removal rate of $^{233}$Pa = feed rate of $^{233}$U. \cite{betzler2016modeling}.
-	\item Non-thorium feed mechanism: continuous injection of Heavy Metal (HM) (excluding Th) and simultaneously feed of all or fraction of $^{233}$U from \texttt{Pa-decay tank}.
+	\item Thorium feed mechanism: continuous feed flow of thorium from the thorium stockpile and $^{233}$U from the \texttt{Pa-decay tank}\footnote{An imaginary tank used to store protactinium extracted from the core.}, where the removal rate of $^{233}$Pa = feed rate of $^{233}$U. \cite{betzler2016modeling}.
+	\item Non-thorium feed mechanism: continuous injection of heavy metal (excluding Th) and simultaneous feed of all or fraction of $^{233}$U from the \texttt{Pa-decay tank}.
 \end{itemize}
 
-All calculations presented in the present paper were performed using SERPENT-2 version 2.1.30 \cite{leppanen2014serpent}. We used the MSR burnup routine provided by SERPENT-2 to simulate continuous online reprocessing and refueling. SERPENT-2 uses an internal calculation routine for solving the set of Bateman equations describing the changes in the material compositions caused by neutron-induced reactions and radioactive decay \cite{leppanen2014serpent}. Additionally, SERPENT-2 allows us to conduct the burnup calculations on computer clusters with multiple cores using distributed-memory MPI parallelization.
+All calculations presented in this paper are performed using SERPENT-2 version 2.1.31 \cite{leppanen2014serpent}. We use the MSR burnup routine provided by SERPENT-2 to simulate continuous online reprocessing and refueling. SERPENT-2 uses an internal calculation routine for solving the set of Bateman equations describing the changes in the material compositions caused by neutron-induced reactions and radioactive decay \cite{leppanen2014serpent}. Additionally, SERPENT-2 allows us to conduct the burnup calculations on computer clusters with multiple cores using distributed-memory MPI parallelization.
 
-This present paper is organized as follows: after an introduction about 
-\gls{MSR} systems, the model description is discussed in section \ref{Model-description}. 
-Methodology and tools is descried in section \ref{Methodology-and-tools}. Extraction and feed mechanisms 
-are addressed in section  \ref{Feed-and-extraction-rates}. Section \ref{Results-and-discussion} focuses on the results and discussion. 
-Finally, section \ref{Conclusion} highlights the conclusions.
+This paper is organized as follows: section \ref{Introduction} introduces \gls{MSR} systems, section \ref{Model-description} discusses the model description, section \ref{Methodology-and-tools} describes methodology and tools, section \ref{Feed-and-extraction-rates} addresses extraction and feed mechanisms, section \ref{Results-and-discussion} focuses on the results and discussion, and section \ref{Conclusion} highlights the conclusions.
 
 %produce enough amount of $^{233}$U to start a new \gls{SD-TMSR}.
 %Therefore, the aim of this paper is to operate the \gls{SD-TMSR} for a long 
