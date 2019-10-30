@@ -1,4 +1,4 @@
-manuscript = msbr-reproc
+manuscript = Scenarios
 references = $(wildcard *.bib)
 latexopt   = -halt-on-error -shell-escape -file-line-error
 
