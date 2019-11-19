@@ -1,0 +1,91 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plain Cover Letter
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Rensselaer Polytechnic Institute (http://www.rpi.edu/dept/arc/training/latex/resumes/)
+% It was modified by Katy Huff
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%    PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{letter} % Default font size of the document, change to 10pt to fit more text
+\usepackage{graphicx}
+%\usepackage{newcent} % Default font is the New Century Schoolbook PostScript font
+%\usepackage{helvet} % Uncomment this (while commenting the above line) to use the Helvetica font
+
+% Margins
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+%\let\raggedleft\raggedright % Pushes the date (at the top) to the left, comment this line to have the date on the right
+
+\usepackage{eso-pic,graphicx}
+
+
+%--------------------------------------------------------------------------------------
+%--------INPUT DATA
+%--------------------------------------------------------------------------------------
+\usepackage{xspace}
+\newcommand{\StudentFirstName}{O.\xspace}
+\newcommand{\StudentLastName}{Ashraf\xspace}
+\newcommand{\RecipientName}{Prof. Mostafa Ghiaasiaan\xspace}
+\newcommand{\RecipientAddress}{Executive Editor\\Annals of Nuclear Energy}
+%\newcommand{\<++>}{<++>\xspace}
+
+\begin{document}
+	\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{background.pdf}}
+	
+	
+	%----------------------------------------------------------------------------------------
+	%    ADDRESSEE SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\begin{letter}{\RecipientName\\
+			\RecipientAddress\xspace}
+		
+		%-------------------------------------------------------------------------------
+		%    YOUR NAME & ADDRESS SECTION
+		%-------------------------------------------------------------------------------
+		\address{O. Ashraf\\
+			oabdelaziz@mephi.ru\\
+			osama.ashraf@edu.asu.edu.eg\\
+			Institute of Nuc. Physics and Eng.\\
+			National Research Nuclear University\\
+			Moscow, Russia, 115409}
+		
+		%-------------------------------------------------------------------------------
+		%    LETTER CONTENT SECTION
+		%-------------------------------------------------------------------------------
+		
+		\opening{To \RecipientName,}
+		
+		Please find enclosed a manuscript entitled: ``Various strategies for thorium fuel cycle transition in the SD-TMSR'' which I and my coauthors (Mr. Andrei Rykhlevskii, Prof. G. V. Tikhomirov, 
+		and Prof. Kathryn D. Huff) are submitting for publication as a research article 
+		in Annals of Nuclear Energy. The presented manuscript is 100\% original and never been published in any form (symposia, conferences, etc). 
+		
+		This manuscript investigates the fuel cycle and neutronics performance of the single-fluid double-zone thorium molten salt reactor (SD-TMSR) with different fissile material loadings at startup: High Assay Low Enriched Uranium (HALEU) (19.79\%), Pu mixed with HALEU (19.79\%), reactor-grade Pu, transuranic elements (TRU), and $^{233}$U, using SERPENT-2 Monte Carlo code. This manuscript provides feasible strategies for thorium fuel cycle transition in the SD-TMSR based on reactor-grade Pu and transuranic elements (TRU) results.
+		
+		Declarations of interest: none\\
+		
+		Thank you for your consideration of our work.
+		
+		Your quick response will be highly appreciated.
+		
+		\closing{Sincere regards,
+			\includegraphics[height=1.5cm]{signature.png}\\
+			\fromsig{O. Ashraf\\
+				Assistant Teacher\\
+				Institute of Nuc. Physics and Eng.\\
+				National Research Nuclear University (MEPhI)}
+		}
+		
+		%-------------------------------------------------------------------------------
+		
+	\end{letter}
+	
+\end{document}
