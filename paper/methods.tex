@@ -28,7 +28,7 @@ characteristics of the \gls{SD-TMSR} are listed in Table~\ref{tab:table1}.
 \begin{figure} % replace 't' with 'b' to \centering [hbp!]
 	\includegraphics[width=\textwidth]{ff.png}
 	\caption{$XZ$ (a) and $XY$ (b) section of the quarter-core model of the 
-	SD-TMSR \cite{ashraf2019Preliminary}.}
+	SD-TMSR.}
 	\label{fig:ff}
 \end{figure}
 
@@ -69,9 +69,9 @@ characteristics of the \gls{SD-TMSR} are listed in Table~\ref{tab:table1}.
 %\end{figure}
 
 \subsection{Fuel composition}
-The general composition of the liquid fuel salt in this work is 70LiF - 
+The general composition of the startup liquid fuel salt in this work is 70LiF - 
 17.5BeF$_2$ - 12.5(HM)F$_N$ mole\%, where HM is the heavy metal (mixture of 
-thorium and one of these fissile materials: \gls{HALEU}, Pu mixed with \gls{HALEU}, reactor-grade Pu, \gls{TRU} from LWR SNF, and $^{233}$U).
+thorium and one of these fissile materials: \gls{HALEU}, Pu mixed with \gls{HALEU}, reactor-grade Pu, \gls{TRU}, and $^{233}$U).
 The aim of this paper is to simulate the  
 operation of the \gls{SD-TMSR} for 60 years with various startup fissile 
 compositions and without any external feed of fissile $^{233}$U which we 
@@ -132,7 +132,7 @@ Table~\ref{tab:table5}.
 	\begin{tabularx}{\textwidth}{p{0.13\textwidth} X p{0.18\textwidth} 
 	p{0.14\textwidth} X X}
 		\hline
-		Fuel salt component& \gls{LEU} (19.79 wt.\%) & Pu+enriched U (19.79 wt.\%) 
+		Fuel salt component& \gls{HALEU} (19.79 wt.\%) & Pu+\gls{HALEU} (19.79 wt.\%) 
 		&  reactor-grade Pu & \gls{TRU}& $^{233}$U \\
 		\hline
 		LiF&70.0&70.0&70.0&70.0&70.0\\
@@ -141,6 +141,8 @@ Table~\ref{tab:table5}.
 		UF$_4$&4.25&4.75&&&	0.20		\\
 		PuF$_3$&&0.25&1.75&&		\\
 		(TRU)F$_3$&&&	&3.85	&\\
+		\hline
+		Total HM &12.5&12.5&12.5&12.5&12.5\\
 		\hline
 	\end{tabularx}
 	\label{tab:table4}
@@ -153,10 +155,10 @@ Table~\ref{tab:table5}.
 	\begin{tabularx}{\textwidth}{X X p{0.18\textwidth} 
 	p{0.14\textwidth} X X}
 		\hline
-		Nuclide & \gls{LEU} (19.79\%) & Pu+enriched U (19.79wt.\%) &  
+		Nuclide & \gls{HALEU} (19.79\%) & Pu+\gls{HALEU} (19.79wt.\%) &  
 		reactor-grade Pu & \gls{TRU}& $^{233}$U \\	\hline
 		$^{232}$Th       &6.24E+04 & 4.67E+04 &   6.75E+04			& 5.44E+04	& 7.69E+04    \\ 
-		$^{233}$U        &         & &        &       &  1.30E+06 \\
+		$^{233}$U        &         & &        &       &  1.30E+03 \\
 		$^{235}$U        & 3.17E+03 &6.01E+03	&            &   & \\
 		$^{238}$U      	 &1.28E+04  &2.43E+04 &	&  &\\
 		$^{237}$Np	  	 &         && &1.58E+03	&    \\
@@ -180,9 +182,7 @@ Table~\ref{tab:table5}.
 
 Simulation of liquid-fueled Molten Salt Reactor (MSR) systems requires 
 computational software that can support online fuel salt reprocessing and 
-refueling \cite{serp2014molten}. In this work, SERPENT-2 version 2.1.31 
-\footnote{SERPENT-2 is a 3D continuous energy Monte Carlo neutron 
-transport and burnup code.} \cite{leppanen2014serpent} simulates the 
+refueling \cite{serp2014molten}. In this work, SERPENT-2 version 2.1.31 \cite{leppanen2014serpent} simulates the 
 Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR) full-core with various initial fuel types. This extension 
 of SERPENT accounts for continuous online reprocessing and refueling 
 \cite{aufiero2013extended}. The ENDF-VII.0 cross section library was used for all 
@@ -227,19 +227,19 @@ the present work, we adjust the transfer rates of fresh fuel to maintain core
 criticality and to keep fuel salt mass constant during burnup. The continuous feed constant calculation procedures are summarized as follows:
 \begin{enumerate}
 	\item The simulation starts without injecting refueling materials (i.e. only removing FPs and Pa).
-	\item After the first depletion calculation step, we check the total mass density of FPs and Pa in the \texttt{FP-waste tank} and \texttt{Pa-tank}, respectively.
+	\item After the first depletion calculation step, we check the total mass density of FPs and Pa in the \texttt{FP-waste tank} and \texttt{Pa-decay tank}, respectively.
 	\item A simple calculation yields the amount of heavy metal that must be added during this cycle:
 	\subitem 3a. \textbf{Thorium feed mechanism}: mass of Th $\approx$ mass of extracted FPs and mass of $^{233}$U $\approx$ mass of extracted Pa.
-	\subitem 3b. \textbf{Non-thorium feed mechanism}: mass of the heavy metals (excluding Th) $\approx$ mass of extracted FPs and mass of $^{233}$U $\approx$ mass of extracted Pa.
+	\subitem 3b. \textbf{Non-thorium feed mechanism}: mass of external heavy metals (excluding Th) $\approx$ mass of extracted FPs and mass of $^{233}$U $\approx$ mass of extracted Pa.
 	\item Dividing this mass by time and inventory of refueling material gives the corresponding feed constant.
 \end{enumerate}
 The cycle calculation runs iteratively until the burnup reaches the desired worth.
 
 \section{Feed and extraction rates} \label{Feed-and-extraction-rates}
 In the present work, two different feed mechanisms are used: (1) thorium and (2) non-thorium.
-The first mechanism allows continuous feed flow of thorium from the thorium stockpile and 
+The first mechanism allows continuous feed flow of thorium from the external stockpile and 
 $^{233}$U from the \texttt{Pa-decay tank}. In contrast, the second mechanism 
-continuously injects heavy metal (HM) (excluding Th) and simultaneously feeds  
+continuously injects external heavy metals (\gls{HALEU}, Pu mixed with \gls{HALEU}, reactor-grade Pu, \gls{TRU}) and simultaneously feeds  
 all or part of produced $^{233}$U from the \texttt{Pa-decay tank}. The fission 
 products (FPs) act as poisons in MSRs: they negatively impact the reactivity. 
 Therefore, \gls{FPs} must be extracted during reactor operation. Consider 
