@@ -28,7 +28,7 @@ characteristics of the \gls{SD-TMSR} are listed in Table~\ref{tab:table1}.
 \begin{figure} % replace 't' with 'b' to \centering [hbp!]
 	\includegraphics[width=\textwidth]{ff.png}
 	\caption{$XZ$ (a) and $XY$ (b) section of the quarter-core model of the 
-	SD-TMSR.}
+	SD-TMSR \cite{ashraf2019whole_core}.}
 	\label{fig:ff}
 \end{figure}
 
@@ -241,19 +241,21 @@ The first mechanism allows continuous feed flow of thorium from the external sto
 $^{233}$U from the \texttt{Pa-decay tank}. In contrast, the second mechanism 
 continuously injects external heavy metals (\gls{HALEU}, Pu mixed with \gls{HALEU}, reactor-grade Pu, \gls{TRU}) and simultaneously feeds  
 all or part of produced $^{233}$U from the \texttt{Pa-decay tank}. The fission 
-products (FPs) act as poisons in MSRs: they negatively impact the reactivity. 
+products (FPs) act as poisons in nuclear reactors: they negatively impact the reactivity. 
 Therefore, \gls{FPs} must be extracted during reactor operation. Consider 
-$T_{r}$ as the time during which the total fuel salt is reprocessed and 
-$dN_{e}$ as the amount of particular element $e$ with inventory $N_{e}$ that 
-the \gls{MSR} extracts during time $dt$, thus \cite{nuttin2005potential}
-
-\begin{equation}
+the \gls{MSR} extracts $dN_{e}$ amount of particular element $e$ during time $dt$, thus \cite{nuttin2005potential}:
+\begin{align}
+\dfrac{dN_{e}}{dt} &= N_{e}\dfrac{\varepsilon_{e}}{T_{r}}
 \label{Equ:1}
-\dfrac{dN_{e}}{dt} = N_{e}\dfrac{\varepsilon_{e}}{T_{r}},	
-\end{equation}
+\intertext{where}
+dN_{e} 	&= \mbox{the amount of particular element $e$} \nonumber \\
+dt   	&= \mbox{the extraction time of $dN_e$} \nonumber \\
+N_{e}  	&= \mbox{total inventory of element $e$} \nonumber \\
+\varepsilon_{e}	&= \mbox{the removal efficiency $\%$} \nonumber \\
+T_{r}	&= \mbox{the time during which the total fuel salt is reprocessed.} \nonumber
+\end{align}
 
-where $\varepsilon_{e}$ is the removal efficiency \%. Integration of equation \ref{Equ:1} gives 
-the removal constant $\lambda_{e}$ $[s^{-1}]$ (the rate at which the material 
+Integration of equation \ref{Equ:1} gives the removal constant $\lambda_{e}$ $[s^{-1}]$ (the rate at which the material 
 is removed), where $\lambda_{e}=\dfrac{{\varepsilon_{e}}}{{T}_{r}}$. The removal constant 
 $\lambda_{e}$ of gaseous and other fission products is precisely calculated 
 and summarized in Table~\ref{tab:table6}. The effective reprocessing time for 

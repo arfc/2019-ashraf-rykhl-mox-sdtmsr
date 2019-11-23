@@ -30,8 +30,7 @@ specific nuclear facilities. Therefore, we examine alternative fissile
 materials to replace the $^{233}$U in the startup fuel
 composition \cite{betzler2016modeling,zou2018transition}. The thorium fuel
 cycle transition can be achieved after reaching the doubling
-time of $^{233}$U $-$ time required to produce enough amount of $^{233}$U to trigger a
-	new SD-TMSR $-$ because in this case, all startup fissile material
+time of $^{233}$U (required time to produce enough $^{233}$U to start up a new unit) because in this case, all startup fissile material
 is being substituted by newly produced $^{233}$U.
 
 Betzler \emph{et al.} (2016) discussed the simulation of the startup of a \gls{MSBR} unit
@@ -70,6 +69,8 @@ initial fissile materials: \gls{HALEU}, Pu mixed with \gls{HALEU}, reactor-grade
 	\item \textbf{Thorium feed mechanism}: continuous feed flow of thorium from the external stockpile and $^{233}$U from the \texttt{Pa-decay tank}\footnote{An external tank used to store protactinium extracted from the core.}, where the removal rate of $^{233}$Pa = feed rate of $^{233}$U \cite{betzler2016modeling}.
 	\item \textbf{Non-thorium feed mechanism}: continuous injection of external heavy metals (\gls{HALEU}, Pu mixed with \gls{HALEU}, reactor-grade Pu, \gls{TRU}) and simultaneous feed of all or fraction of $^{233}$U from the \texttt{Pa-decay tank}.
 \end{itemize}
+
+$^{233}$U (in the \texttt{Pa-decay tank}) is contaminated with $^{232}$U, which produced from parasitic (n, 2n) reactions on $^{233}$U itself, or on $^{233}$Pa, or on $^{232}$Th. $^{208}$Tl a daughter of $^{232}$U emits intense $\gamma$-radiation and this makes $^{233}$U difficult to handle. Moreover, for nonproliferation reasons, $^{233}$U could be diluted with $^{238}$U which makes it impossible to use for nuclear weapons.
 
 All calculations presented in this paper are performed using SERPENT-2 version 2.1.31\footnote{SERPENT-2 is a 3D continuous energy Monte Carlo neutron 
 	transport and burnup code.} \cite{leppanen2014serpent}. We use the MSR burnup routine provided by SERPENT-2 to simulate continuous online reprocessing and refueling. SERPENT-2 uses an internal calculation routine for solving the Bateman equations describing the changes in the material compositions caused by neutron-induced reactions and radioactive decay \cite{leppanen2014serpent}. Additionally, SERPENT-2 enables burnup calculations on computer clusters with multiple cores using distributed-memory MPI parallelization.
