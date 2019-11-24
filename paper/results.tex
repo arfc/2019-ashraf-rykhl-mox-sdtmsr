@@ -1,28 +1,27 @@
 \section{Results and discussion} \label{Results-and-discussion}
-
-\subsection{Thorium feed mechanism}
-
-The thorium feed mechanism adopts continuous feed flow of external thorium from the thorium stockpile and 
-$^{233}$U from the \texttt{Pa-decay tank}. The molar fraction of the heavy metal 
-in the initial fuel was kept constant and equal to 12.5 mole\% for all cases. 
+The molar fraction of the heavy metal (HM) 
+in the initial fuel was kept constant and equal to 12.5 mole\% for all cases (see Table~\ref{tab:table4}). 
 Additionally, the initial fissile material fraction was increased for the five fuel 
 salt compositions until the \gls{SD-TMSR} reactor was sufficiently critical at 
-the Beginning Of Life (BOL). 
+the Beginning Of Life (BOL).
+\subsection{Thorium feed mechanism}
+The thorium feed mechanism continuously feeds thorium from the external stockpile and 
+$^{233}$U from the \texttt{Pa-decay tank}.
 Figure~\ref{fig:keff1} illustrates the effective multiplication factor 
 dynamics during reactor operation for the thorium feed mechanism. As shown in 
 Figure~\ref{fig:keff1}, the effective multiplication factor ($k_{eff}$) 
 decreases sharply during the first 25 \gls{EFPY} of reactor operation for the first 
 four cases. $k_{eff}$ decreases as a result of depletion of the initial 
-fissile materials and production of poisonous fission products (FPs). Thus, the 
+fissile materials and production of poisonous fission products (FPs). The amount of $^{233}$U generated in 
+the SD-TMSR is not enough to maintain the reactor criticality and 
+counteract parasitic neutron absorption. Thus, the 
 reactor becomes subcritical relatively quickly for alternative startup 
 compositions, for example, $\approx$ $4$ years in the \gls{TRU} case and $\approx$ $12$ 
-years in the reactor-grade Pu case. The amount of $^{233}$U generated in 
-the Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR) is not enough to maintain the reactor criticality and 
-counteract parasitic neutron absorption. Nevertheless, 
-the continuous feed flow of thorium and $^{233}$U helps to operate the 
-\gls{SD-TMSR} for a lifetime-long period of time (Figure~\ref{fig:keff1} (U-233 case)). 
-Additionally, the molar fraction of the LEU and reactor-grade Pu in the initial fuel composition was increased
-more, consequently, the initial $k_{eff}$ for these cases increased (Figure~\ref{fig:keff1} (LEU and reactor-grade Pu cases)). Nevertheless, $k_{eff}$ still decreases below 1.0, as a result of increasing the non-fissile heavy metals in the initial fuel \cite{betzler2016modeling}.
+years in the reactor-grade Pu case. For U-233 case, 
+the continuous feed flow of thorium and $^{233}$U from the \texttt{Pa-decay tank} helps to operate the 
+\gls{SD-TMSR} for a full lifetime (60 year) (Figure~\ref{fig:keff1} (U-233 case)). 
+Additionally, the molar fractions of \gls{HALEU} and reactor-grade Pu in the initial fuel composition were increased
+more. Consequently, the initial $k_{eff}$ for these cases increased (Figure~\ref{fig:keff1} (HALEU and reactor-grade Pu cases)). Nevertheless, $k_{eff}$ still decreases below 1.0, as a result of increasing the non-fissile heavy metals in the initial fuel \cite{betzler2016modeling}.
 
 \begin{figure}
 	\centering
@@ -34,18 +33,14 @@ more, consequently, the initial $k_{eff}$ for these cases increased (Figure~\ref
 
 \subsection{Non-thorium feed mechanism}
 
-The non-thorium feed mechanism allows continuous feed flow of 
-$^{233}$U from the \texttt{Pa-decay tank} and external heavy metals (excluding Th). 
-Under the non-thorium feed mechanism, four different initial fissile materials are studied: \gls{LEU}, Pu mixed with \gls{LEU}, reactor-grade Pu, and \gls{TRU}. The continuous feed of $^{233}$U 
+The non-thorium feed mechanism continuously feeds 
+$^{233}$U from the \texttt{Pa-decay tank} and external heavy metals (\gls{HALEU}, Pu mixed with \gls{HALEU}, reactor-grade Pu, \gls{TRU}).
+Under the non-thorium feed mechanism, four different initial fissile materials are studied: \gls{HALEU}, Pu mixed with \gls{HALEU}, reactor-grade Pu, and \gls{TRU}. The continuous feed of $^{233}$U 
 without $^{232}$Th will lead to a supercritical reactor, thus the $^{233}$U case 
 is excluded from the non-thorium feed mechanism study.
-The molar fraction of the heavy metal in the initial fuel was kept constant and equal to 12.5 mole\% for all cases. 
-Additionally, the initial fissile material fraction was increased for the four fuel 
-salt compositions until the \gls{SD-TMSR} reactor was sufficiently critical at 
-the BOL. 
 Figure~\ref{fig:keff2} shows the change of the effective multiplication factor 
 during 60 \gls{EFPY} of reactor operation for the non-thorium feed mechanism. Both the reactor-grade Pu and TRU cases 
-show promising results relative to the other two cases (LEU and Pu+LEU) (see Figure~\ref{fig:keff2}). 
+show promising results relative to the other two cases (HALEU and Pu+HALEU) (see Figure~\ref{fig:keff2}). 
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{keff2.png}
@@ -55,7 +50,6 @@ show promising results relative to the other two cases (LEU and Pu+LEU) (see Fig
 	interval $\pm\sigma$ is shaded).} 
 	\label{fig:keff2}
 \end{figure}
-
 For the reactor-grade Pu case, the amount of $^{233}$U generated in the \gls{SD-TMSR}, in addition to the external feed flow of Pu, is sufficient to maintain the reactor criticality and counteract the neutron absorption in the initial non-fissile isotopes and FPs. 
 For the \gls{TRU} fuel salt, the amount of 
 $^{233}$U and the external feed flow of TRU is barely enough to operate the 
@@ -63,8 +57,8 @@ reactor for a long period of time ($\approx$ $40$ years) without any
 external feed of $^{233}$U ($^{233}$U used only from the \texttt{Pa-decay tank}). Nevertheless, $k_{eff}$ decreases with the burnup 
 because of the \glspl{MA}\footnote{In the present work, the minor actinides 
 (MA) include Np, Am, and Cm.} accumulating in the core as a result of 
-continuous TRU feed. As shown in Figure~\ref{fig:keff2}, the LEU and Pu+LEU 
-fuel are less attractive for the non-thorium feed mechanism. The continuous LEU 
+continuous TRU feed. As shown in Figure~\ref{fig:keff2}, the HALEU and Pu+HALEU 
+fuel are less attractive for the non-thorium feed mechanism. The continuous HALEU 
 feed increases the amount of fertile $^{238}$U and consequently, reduces the 
 feasibility of such fissile materials. According to the $k_{eff}$ 
 results, reactor-grade Pu and TRU are the only alternative fissile materials that  
@@ -95,7 +89,7 @@ $2.0$ $kg/d$, respectively.
 \end{figure}
 
 Figures~\ref{fig:inventoryCCCC} and~\ref{fig:inventoryPu_TRUCCC} demonstrate 
-the evolution of important isotopes for the $^{233}$U, Pu, and TRU cases 
+the evolution of important nuclide inventories for the $^{233}$U, Pu, and TRU cases 
 respectively. For the $^{233}$U case (Figure~\ref{fig:inventoryCCCC}), the mass of Pa in the fuel salt is almost constant and reaches 
 $17.8$  $kg$ at the end of the operation time. 
 Additionally, the mass of minor actinides (MA) and Pu increases with time. The level of Pu in the fuel salt correlates with the mass of the MA; however, MA need more time to reach equilibrium than Pu. Uranium inventory increases during 
@@ -104,21 +98,21 @@ maintain an almost constant inventory throughout the full operation time.
 For the Pu and TRU cases (Figure~\ref{fig:inventoryPu_TRUCCC}), the Pa extraction time was selected to be 30 s 
 to avoid poisoning the core. Figure~\ref{fig:inventoryPu_TRUCCC} shows that the mass of Pa in the fuel salt 
 is relatively low when compared to Pa mass in the $^{233}$U case (Figure~\ref{fig:inventoryCCCC}). Major 
-isotopes for all three cases reach the equilibrium state after $\approx$ $30$ 
+elements for all three cases reach the equilibrium state after $\approx$ $30$ 
 years (see Figure~\ref{fig:inventoryCCCC} and~\ref{fig:inventoryPu_TRUCCC}).
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{inventoryCCCC.png}
 	\vspace{-0.4in}
-	\caption{Evolution of the important nuclides inventories for the $^{233}$U 
-		case (MA involves Np, Am, Cm) \cite{ashraf2019whole_core}.}
+	\caption{Evolution of important nuclide inventories for $^{233}$U 
+		startup fuel (MA involves Np, Am, Cm) \cite{ashraf2019whole_core}.}
 	\label{fig:inventoryCCCC}
 \end{figure}
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{inventoryPu_TRUCCC.png}
 	\vspace{-0.5in}
-	\caption{Evolution of the important nuclides inventories for the 
+	\caption{Evolution of important nuclide inventories for the 
 		reactor-grade Pu case (solid lines) and for the TRU case (dashed lines).}
 	\label{fig:inventoryPu_TRUCCC}
 \end{figure}
@@ -133,7 +127,7 @@ $37.96$\% for the reactor-grade Pu and TRU cases, respectively.
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{Th232CC.png}
-	\caption{The variation of thorium mass in the fuel salt for the $^{233}$U, reactor-grade Pu, and TRU cases.}
+	\caption{Mass variation of all thorium isotopes in the fuel salt for the $^{233}$U, reactor-grade Pu, and TRU cases.}
 	\label{fig:Th232CC}
 \end{figure}
 
@@ -150,38 +144,39 @@ the three cases.
 \end{figure}
 
 In the non-thorium feed mechanism, the SD-TMSR is continuously refueled by heavy metals (Pu and TRU) for 
-criticality, which increases the Pu molar fraction (mole\%) in the molten salt. 
-According to literature, the limit of Pu solubility in the FLiBe salt is 
-$\approx$ $4.0$ mole\% \cite{ignatiev2012progress,sood1975plutonium}. 
-Figure~\ref{fig:PusolubilityCC} represents the Pu fraction in the fuel salt 
-(mole\%) for the $^{233}$U, reactor-grade Pu, and TRU cases, respectively. In the $^{233}$U and reactor-grade Pu cases, the Pu fraction increases 
+criticality, which increases the Pu mole concentration (\%) in the molten salt. 
+The Pu solubility in FLiBe is 
+$\approx$ $4.0$ \% \cite{ignatiev2012progress,sood1975plutonium}. 
+Figure~\ref{fig:PusolubilityCC} represents the Pu mole concentration variation in the fuel salt 
+for the $^{233}$U, reactor-grade Pu, and TRU cases, respectively. In the $^{233}$U and reactor-grade Pu cases, the Pu mole concentration increases 
 slightly but still below its solubility limit. On the other hand, the Pu 
-fraction in the molten salt loaded by TRU increases during operation and 
+mole concentration in the molten salt loaded by TRU increases during operation and 
 reaches the Pu solubility limit after $\approx$ $40$ years. This issue may 
 be solved by increasing the reactor operation temperature or reducing the 
 HM initial inventory \cite{zou2018transition}.
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{PusolubilityCC.png}
-	\caption{The Pu fraction in the fuel salt (mole\%) for the $^{233}$U, reactor-grade Pu, and TRU cases.}
+	\caption{The Pu mole concentration in the fuel salt for the $^{233}$U, reactor-grade Pu, and TRU cases.}
 	\label{fig:PusolubilityCC}
 \end{figure}
 \FloatBarrier
 
 Figure~\ref{fig:NetCC} demonstrates the net production of $^{233}$U during 
-operation for the $^{233}$U, reactor-grade Pu, and TRU cases, respectively. For the TRU case, the net production of $^{233}$U is almost 
+reactor operation for the $^{233}$U, reactor-grade Pu, and TRU cases, respectively. For the TRU case, the net production of $^{233}$U is almost 
 zero. 
-Although all produced $^{233}$U is used to refuel the core, the reactor is subcritical after $40$ years of operation (Figure~\ref{fig:keff2}).
+Although all produced $^{233}$U is used to refuel the core, the reactor is subcritical after $40$ years of operation (see Figure~\ref{fig:keff2}).
 In the $^{233}$U and reactor-grade Pu cases, the net production of 
-$^{233}$U increases with burnup and reaches about $1.77$ $t$ and $10$ $t$ at EOL, respectively. As shown in 
-Figure~\ref{fig:NetCC}, for the $^{233}$U case, after 26 years the net production of $^{233}$U reaches 
+$^{233}$U increases with burnup and reaches about $1.77$ $t$ and $10$ $t$ at EOL, respectively. Figure~\ref{fig:NetCC} shows that for the $^{233}$U 
+case the net production of $^{233}$U during the first 455 days is negative; 
+about $175.28$ $kg$ of $^{233}$U must be added during this period. 
+As shown in Figure~\ref{fig:NetCC}, for the $^{233}$U case, after 26 years the net production of $^{233}$U reaches 
 $1.3$ $t$; this is sufficient to start up another \gls{SD-TMSR}. Similarly, 
 one can see that the same amount of $^{233}$U ($1.3$ $t$) can be achieved 
 after $\approx$ $4.5$ years if we apply the non-thorium feed mechanism on 
 the SD-TMSR that was initially loaded by reactor-grade Pu alternative to 
-$^{233}$U. In addition, Figure~\ref{fig:NetCC} shows that for the $^{233}$U 
-case the net production of $^{233}$U during the first 455 days is negative; 
-about $175.28$ $kg$ of $^{233}$U must be added during this period. 
+$^{233}$U. For nonproliferation reasons, $^{233}$U could be diluted with $^{238}$U which makes it impossible to use for nuclear weapons.
+  
 In conclusion, the thorium fuel cycle transition can be achieved by selecting the 
 proper feed mechanism and initial fissile material. 
 Specifically, applying the non-thorium feed mechanism on 
@@ -190,13 +185,13 @@ transition to the thorium fuel cycle after $\approx$
 $4.5$ years. Additionally, applying the thorium feed mechanism on 
 the SD-TMSR loaded by $^{233}$U allows the 
 transition to the thorium fuel cycle after $\approx$ $26$ years of operation. 
-The comparison between the two feed mechanisms with different types of initial 
-fuel is listed in Table~\ref{tab:comp_feeds}. 
+The comparison between the two feed mechanisms with various initial fuel types 
+is listed in Table~\ref{tab:comp_feeds}. 
 
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{NetCC.png}
-	\caption{Net production of $^{233}$U during the burnup period (60 \gls{EFPY}) for the $^{233}$U, reactor-grade Pu, and TRU cases.}
+	\caption{Net production of $^{233}$U with burnup (60 \gls{EFPY}) for the $^{233}$U, reactor-grade Pu, and TRU cases.}
 	\label{fig:NetCC}
 \end{figure}
 
@@ -212,7 +207,7 @@ fuel is listed in Table~\ref{tab:comp_feeds}.
 				p{0.14\textwidth} X X 
 			}  %{\textwidth}
 			\hline
-			Feed mechanism & \gls{LEU} (19.79\%) & Pu+enriched U (19.79wt.\%) &  
+			Feed mechanism & \gls{HALEU} (19.79\%) & Pu+\gls{HALEU} (19.79wt.\%) &  
 			reactor-grade Pu & \gls{TRU}& $^{233}$U \\
 			\hline
 			Thorium feed\\ mechanism&\xmark&\xmark&\xmark&\xmark& \cmark \\
@@ -245,7 +240,9 @@ similar to the initial thermal spectrum of a $^{233}$U fueled \gls{SD-TMSR}.
  	\centering
  	\includegraphics[width=1.01\textwidth]{spectrumFLUX110vC.png}
  			\vspace{-0.4in}
- 	\caption{The neutron flux energy spectrum at BOL (solid lines) and EOL (dashed lines) for the $^{233}$U, reactor-grade Pu, and TRU cases.}
+ 	\caption{The neutron flux energy spectrum at BOL (solid lines) and EOL (dashed lines) for 3 different initial 
+ 		fuel salt compositions (for all cases, the neutron flux
+ 		confidence intervals $\pm\sigma$ at BOL and EOL are $<1.0139$\% and $<0.6274$\%, respectively).}
  	\label{fig:spectrumFLUX110vC}
 \end{figure}
 
@@ -292,7 +289,7 @@ significant changes are observed for thermal neutron flux in the outer core
 zone and reflector. Additionally, Figure~\ref{fig:thermal_flux} shows 
 relatively large changes in thermal flux leakage from the core for the Pu and 
 TRU cases. The SD-TMSR core design was optimized for $^{233}$U  
-\cite{li_optimization_2018}; thus, the core geometry (e.g., channels lattice 
+\cite{li_optimization_2018}, thus, the core geometry (e.g., channels lattice 
 pitch) must be re-optimized for another type of fuel to obtain better 
 neutronics performance.
 
@@ -365,14 +362,14 @@ we focus only on the Doppler Effect for the moderator temperature coefficient.
 		\multicolumn{2}{c}{TRU} \\ \cline{2-7}
 		\space  & Initial & Equil. & Initial & Equil. & Initial & 
 		Equil. \\ \hline
-		Fuel salt temperature&$-4.96$&$-5.26$&$-4.99$&$-3.12$&$-3.23$&$-1.97$ 
+		Fuel salt temperature ($\alpha_{D,fuel}$) &$-4.96$&$-5.26$&$-4.99$&$-3.12$&$-3.23$&$-1.97$ 
 		\\ 
-		Fuel salt density&$+1.49$&$+2.34$&$+1.54$&$-1.58$&$-0.37$&$-1.62$ \\
-		Total salt fuel&$-3.77$&$-2.83$&$-3.22$&$-4.23$&$-3.25$&$-3.69$ \\ 
+		Fuel salt density ($\alpha_{l,fuel}$) &$+1.49$&$+2.34$&$+1.54$&$-1.58$&$-0.37$&$-1.62$ \\
+		Total salt fuel ($\alpha_{fuel})$ &$-3.77$&$-2.83$&$-3.22$&$-4.23$&$-3.25$&$-3.69$ \\ 
 		\hline
-		Graphite temperature&$+1.45$&$+0.45$&$-2.68$&$-1.37$&$-1.44$&$-1.14$ 
+		Graphite temperature ($\alpha_{D,M}$) &$+1.45$&$+0.45$&$-2.68$&$-1.37$&$-1.44$&$-1.14$ 
 		\\	\hline
-		Total core&$-1.77$&$-2.59$&$-6.54$&$-5.06$&$-4.79$&$-4.76$ \\ \hline
+		Total core ($\alpha$) &$-1.77$&$-2.59$&$-6.54$&$-5.06$&$-4.79$&$-4.76$ \\ \hline
 	\end{tabularx}
 	\label{tab:tcoe}
 \end{table}
@@ -417,7 +414,7 @@ The effective multiplication factor can be expressed as follows:
 \begin{align}
 k_{eff} &= \eta f p \epsilon P_f P_t
 \intertext{where}
-\eta     &= \mbox{thermal fission factor} \nonumber \\
+\eta     &= \mbox{neutron reproduction factor} \nonumber \\
 f        &= \mbox{thermal utilization factor} \nonumber \\
 p        &= \mbox{resonance escape probability} \nonumber \\
 \epsilon &= \mbox{fast fission factor} \nonumber \\
@@ -425,9 +422,9 @@ P_f      &= \mbox{fast non-leakage probability} \nonumber \\
 P_t      &= \mbox{thermal non-leakage probability.} \nonumber
 \end{align}
 
-Table~\ref{tab:six_factor} summarizes the six factors for 3 different initial 
+Table~\ref{tab:six_factor} summarizes the six factor for 3 different initial 
 fuel salt compositions at startup and equilibrium. By using SERPENT-2 built-in 
-online reprocessing capabilities, all six factors are calculated at the 
+online reprocessing capabilities, six factor is calculated at the 
 beginning of the operation and after 30 years of operation. Neutron population 
 and number of active/inactive cycles were selected to obtain $k_{eff}$ 
 statistical uncertainty less than 12 pcm. The fast and thermal non-leakage 
@@ -438,7 +435,7 @@ considerably declines for the Pu case due to significant neutron spectrum
 softening.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table} [ht!]
-	\caption{Six factors for the SD-TMSR model for 3 different initial 
+	\caption{Six factor for the SD-TMSR model for 3 different initial 
 		fuel salt compositions at startup and equilibrium.}
 	\begin{tabularx}{\textwidth}{ X | X X  X X  X X } \hline
 		\multirow{3}{*}{Factor}  & \multicolumn{6}{c}{Startup fissile 
@@ -463,7 +460,7 @@ the initial and equilibrium state for all three initial fissile materials.
 $\epsilon$ is much larger at startup for the Pu and TRU cases because these 
 initial fissile materials provide a much harder neutron spectrum than 
 $^{233}$U, and $\epsilon$ grows throughout the core's lifetime. Conversely, 
-$p$ decreases during reactor operation. The thermal fission factor ($\eta$)  
+$p$ decreases during reactor operation. The neutron reproduction factor ($\eta$)  
 increases during reactor operation for the $^{233}$U as initial fuel due to 
 the accumulation of fissile plutonium isotopes, which produce more neutrons 
 per fission ($\nu$). The other two scenarios demonstrate opposite behavior: 
