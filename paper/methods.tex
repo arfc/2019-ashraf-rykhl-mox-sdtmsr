@@ -38,7 +38,7 @@ characteristics of the \gls{SD-TMSR} are listed in Table~\ref{tab:table1}.
 	\begin{tabularx}{\textwidth}{l | r}
 		\hline
 		Thermal power, MW$_{th}$          				&  2,250  \\ 
-		Fuel salt components                            & LiF-BeF$_2$-(\gls{HM})F$_4$ \\
+		Fuel salt components                            & LiF-BeF$_2$-(\gls{HM})F$_N$ \\
 		Fuel composition, mole\%                        & 70-17.5-12.5    \\
 		$^7$Li enrichment, \%        				& 99.995   \\
 		Fuel temperature, K 							& 900  \\
@@ -59,19 +59,12 @@ characteristics of the \gls{SD-TMSR} are listed in Table~\ref{tab:table1}.
 	\end{tabularx}
 	\label{tab:table1}
 \end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\begin{figure}[t!] % replace 't' with 'b' to \centering
-%	\hspace{+0.65in}
-%	\includegraphics[width=\textwidth]{core.png}
-%	\caption{Plan view of SD-TMSR core.}
-%	\label{fig:core}
-%\end{figure}
 
 \subsection{Fuel composition}
 The general composition of the startup liquid fuel salt in this work is 70LiF - 
 17.5BeF$_2$ - 12.5(HM)F$_N$ mole\%, where HM is the heavy metal (mixture of 
-thorium and one of these fissile materials: \gls{HALEU}, Pu mixed with \gls{HALEU}, reactor-grade Pu, \gls{TRU}, and $^{233}$U).
+thorium and one of these fissile materials: \gls{HALEU}, Pu mixed with \gls{HALEU}, reactor-grade Pu, \gls{TRU}, and $^{233}$U), and $N$ is dependent on the chosen fissile material and the thermochemical state of the liquid fuel salt.
+
 The aim of this paper is to simulate the  
 operation of the \gls{SD-TMSR} for 60 years with various startup fissile 
 compositions and without any external feed of fissile $^{233}$U which we 
@@ -89,23 +82,25 @@ All types of initial fissile materials are fed as fluorides.
 The reactor-grade Pu and \gls{TRU} compositions are summarized in 
 Table~\ref{tab:table2} and ~\ref{tab:table3}, respectively.
 
-\begin{table}  %[!ht]
+\begin{table} % [!ht]
+	\centering
 	\caption{Reactor-grade Pu vector (wt.\%) \cite{marka1993explosive}.}
 	\vspace{0.1in}
-	\begin{tabularx}{\textwidth}{r r r r r}
+	\begin{tabularx}{\textwidth}{|X |X |X| X| X|}
 		\hline
 		$^{238}$Pu & $^{239}$Pu & $^{240}$Pu & $^{241}$Pu & $^{242}$Pu \\
 		\hline
-		 1.3&60.3&24.3&9.1&5 \\
+		 1.3 &60.3&24.3&9.1&5 \\
 		\hline
 	\end{tabularx}
 	\label{tab:table2}
 \end{table}
 
-\begin{table}  %[!ht]
+\begin{table} %  [!ht]
+	\centering
 	\caption{\gls{TRU} vector (wt.\%) \cite{de2000scenarios}.}
 	\vspace{0.1in}
-	\begin{tabularx}{\textwidth}{r r r r r r r r r r}
+	\begin{tabularx}{\textwidth}{|X| X| X| X| X| X| X| X| X| X|}
 		\hline
 		$^{237}$Np&$^{238}$Pu & $^{239}$Pu & $^{240}$Pu & $^{241}$Pu & $^{242}$Pu&$^{241}$Am &$^{243}$Am&$^{244}$Cm &$^{245}$Cm\\
 		\hline
@@ -155,7 +150,7 @@ Table~\ref{tab:table5}.
 	\begin{tabularx}{\textwidth}{X X p{0.18\textwidth} 
 	p{0.14\textwidth} X X}
 		\hline
-		Nuclide & \gls{HALEU} (19.79\%) & Pu+\gls{HALEU} (19.79wt.\%) &  
+		Nuclide & \gls{HALEU} (19.79 wt.\%) & Pu+\gls{HALEU} (19.79 wt.\%) &  
 		reactor-grade Pu & \gls{TRU}& $^{233}$U \\	\hline
 		$^{232}$Th       &6.24E+04 & 4.67E+04 &   6.75E+04			& 5.44E+04	& 7.69E+04    \\ 
 		$^{233}$U        &         & &        &       &  1.30E+03 \\
@@ -214,7 +209,7 @@ flow rate of gaseous \gls{FPs} and other materials from the fuel to the
 \gls{FPs} and the other materials (non-dissolved metals, lanthanides, and 
 soluble metals except protactinium).}. Specifically, Pa is removed 
 from the fuel with a certain flow rate into the 
-\texttt{Pa-decay tank} to decay and produce $^{233}$U\footnote{The 
+\texttt{Pa-decay tank} to decay and produce $^{233}$U \footnote{The 
 $^{233}$Pa is removed and left to decay into $^{233}$U with $\tau_{1/2}$ 
 $\approx$ $27$ $d$.}. The produced $^{233}$U is used as a fresh fissile fuel 
 and the residual $^{233}$U (if exist) is the net production of $^{233}$U that required to start up a new SD-TMSR and achieve the transition to thorium fuel cycle. The MSR burnup 
@@ -268,14 +263,14 @@ present work, the effective extraction time for soluble \gls{FPs} is
 $\approx$10.59 days ($\lambda_{e}$ = $-1.092\times10^{-6}$ $s^{-1}$), which is 
 equivalent to a chemical reprocessing rate of 5 m$^3$/d chosen by Nuttin \emph{et al.} \cite{nuttin2005potential} and Li \emph{et al.} \cite{li_optimization_2018}. The effective feed rates of 
 the heavy metals (HM) are changed during reactor operation to conserve the 
-total fuel mass and criticality. The effective feed rates for Th/$^{233}$U, reactor-grade Pu, and TRU cases are listed in Table~\ref{tab:table8}, \ref{tab:table9}, and \ref{tab:table10} in \ref{Appendix}.
+total fuel mass and criticality. The effective feed rates for Th/$^{233}$U, reactor-grade Pu, and TRU cases are listed in Table A.1, A.2, and A.3 in \ref{Appendix}.
 
 
 \begin{table}[ht!]
 	\centering
 	\caption{The reprocessing table \cite{ashraf2019whole_core}.} 
 	\vspace{1ex}
-	\begin{tabularx}{\textwidth}{|p{2.3cm}|p{4.5cm}|p{2cm}|p{2cm}|}
+	\begin{tabularx}{\textwidth}{|p{2.3cm}|p{4cm}|p{2.2cm}|p{1.9cm}|}
 			\hline
 			\textbf{Reprocessing group}  & \textbf{Element} & \textbf{Reprocessing time} & \textbf{Removal constant} $\lambda_{e}$ $[s^{-1}]$ \\
 			\hline
@@ -289,38 +284,3 @@ total fuel mass and criticality. The effective feed rates for Th/$^{233}$U, reac
 	\end{tabularx}
 	\label{tab:table6}
 \end{table}
-
-%\begin{table}[ht!]
-%	\centering
-%	\caption{The refueling table.} 
-%	\vspace{1ex}
-%	\begin{tabularx}{\textwidth}{|p{1.5cm}|b|p{1.9cm}|}
-%		\hline
-%		\textbf{Nuclide} & \textbf{Feed rate} & \textbf{Feed constant$^{\star}$} $\lambda_{e}$ $[s^{-1}]$ \\
-%		\hline
-%		$^{232}$Th        &  1.842 [Kg/day], first 90 [d] & 1.500E-09 \\
-%		&  2.511 [Kg/day], from 90 to 1550 [d] & 		2.045E-09 \\
-%		&  2.456 [Kg/day], from 1550 to 3010 [d] & 		2.000E-09 \\
-%		&  2.321 [Kg/day], from 3010 to 5930 [d]& 		1.890E-09	\\
-%		&  2.241 [Kg/day], from 5930 to 7390 [d] &		1.825E-09	\\
-%		&  2.186 [Kg/day], from 7390 to 12500 [d] &		1.780E-09	\\
-%		&  2.118 [Kg/day], from 12500 to 15420 [d] &	1.725E-09	\\
-%		&  2.136 [Kg/day], from 15420 to 18340 [d]&		1.740E-09		\\
-%		&  2.063 [Kg/day], from 18340 to 21900 [d]&		1.680E-09	 \\ 
-%		\hline
-%		$^{233}$U & 2.619 [Kg/day], first 90 [d]	&   6.400E-09  \\
-%		& 2.009 [Kg/day],  form 90 to 1550 [d] &	4.910E-09 \\
-%		& 1.944 [Kg/day], from 1550 to 3010 [d] &	4.750E-09 \\
-%		& 1.826 [Kg/day],  from 3010 to 5930 [d] &	4.460E-09 \\
-%		& 1.811 [Kg/day],  from 5930 to 7390[d] &	4.425E-09 \\
-%		& 1.744 [Kg/day], from 7390 to 12500 [d] &	4.260E-09 \\
-%		& 1.699 [Kg/day], from 12500 to 18340 [d]	& 4.150E-09 \\
-%		& 1.657 [Kg/day], from 18340 to 21900 [d]	& 4.050E-09 \\
-%		\hline
-%	\end{tabularx}
-%	\begin{tablenotes}
-%		\small
-%		\item  $^{\star}$ Feed constant is the mass fraction of fissile nuclide ($^{232}$Th or $^{233}$U) transferred from the external storage to the core per second.
-%	\end{tablenotes}
-%	\label{tab:table3}
-%\end{table}	
