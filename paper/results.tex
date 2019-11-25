@@ -440,18 +440,20 @@ softening.
 \begin{table} [ht!]
 	\caption{Six factor for the SD-TMSR model for 3 different initial 
 		fuel salt compositions at startup and equilibrium.}
-	\begin{tabularx}{\textwidth}{ X | X X  X X  X X } \hline
-		\multirow{3}{*}{Factor}  & \multicolumn{6}{c}{Startup fissile 
-			material} \\ \cline{2-7}
+	\begin{tabularx}{\textwidth}{ X | X X  X X  X X | p{0.1\textwidth}} \hline
+		\multirow{3}{*}{Factor}  & \multicolumn{6}{c|}{Startup fissile 
+			material} & \multirow{3}{*}{$\pm\bar{\sigma}$} \\ 
+			\cline{2-7}
 		\space  & \multicolumn{2}{c}{$^{233}U$} & \multicolumn{2}{c}{Pu} & 
-		\multicolumn{2}{c}{TRU} \\ \cline{2-7}
-		\space  & Initial & Equil & Initial & Equil & Initial & Equil \\ \hline
-		$\eta$  & 1.26 & 1.40 & 1.66 & 1.44 & 1.59 & 1.31 \\ 
-		f       & 0.97 & 0.98 & 0.96 & 0.76 & 0.80 & 0.75 \\
-		p       & 0.54 & 0.43 & 0.26 & 0.16 & 0.17 & 0.15 \\
-		$\epsilon$ & 1.49 & 1.67 & 2.45 & 5.87 & 4.83 & 6.81 \\
-		P$_f$   & 0.99 & 0.99 & 0.99 & 0.99& 0.99 & 0.99 \\
-		P$_t$   & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 \\ \hline
+		\multicolumn{2}{c|}{TRU} \\ \cline{2-7}
+		\space  & Initial & Equil & Initial & Equil & Initial & Equil & \space 
+		\\ \hline
+		$\eta$  & 1.26 & 1.40 & 1.66 & 1.44 & 1.59 & 1.31&4.9E-4\\ 
+		f       & 0.97 & 0.98 & 0.96 & 0.76 & 0.80 & 0.75&2.1E-4 \\
+		p       & 0.54 & 0.43 & 0.26 & 0.16 & 0.17 & 0.15&4.6E-4 \\
+		$\epsilon$ & 1.49 & 1.67 & 2.45 & 5.87 & 4.83 & 6.81&6.2E-4 \\
+		P$_f$   & 0.99 & 0.99 & 0.99 & 0.99& 0.99 & 0.99&1.7E-6 \\
+		P$_t$   & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00&6.5E-11 \\ \hline
 	\end{tabularx}
 	\label{tab:six_factor}
 \end{table}
