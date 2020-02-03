@@ -1,0 +1,278 @@
+
+%
+% Copyright 2007, 2008, 2009 Elsevier Ltd
+%
+% This file is part of the 'Elsarticle Bundle'.
+% ---------------------------------------------
+%
+% It may be distributed under the conditions of the LaTeX Project Public
+% License, either version 1.2 of this license or (at your option) any
+% later version.  The latest version of this license is in
+%    http://www.latex-project.org/lppl.txt
+% and version 1.2 or later is part of all distributions of LaTeX
+% version 1999/12/01 or later.
+%
+% The list of all files belonging to the 'Elsarticle Bundle' is
+% given in the file `manifest.txt'.
+%
+
+% Template article for Elsevier's document class `elsarticle'
+% with numbered style bibliographic references
+% SP 2008/03/01
+%
+%
+%
+% $Id: elsarticle-template-num.tex 4 2009-10-24 08:22:58Z rishi $
+%
+%
+%\documentclass[preprint,12pt]{elsarticle}
+\documentclass[answers,11pt]{exam}
+
+% \documentclass[preprint,review,12pt]{elsarticle}
+
+% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+% for a journal layout:
+% \documentclass[final,1p,times]{elsarticle}
+% \documentclass[final,1p,times,twocolumn]{elsarticle}
+% \documentclass[final,3p,times]{elsarticle}
+% \documentclass[final,3p,times,twocolumn]{elsarticle}
+% \documentclass[final,5p,times]{elsarticle}
+% \documentclass[final,5p,times,twocolumn]{elsarticle}
+
+% if you use PostScript figures in your article
+% use the graphics package for simple commands
+% \usepackage{graphics}
+% or use the graphicx package for more complicated commands
+\usepackage{graphicx}
+% or use the epsfig package if you prefer to use the old commands
+% \usepackage{epsfig}
+
+% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+% The amsthm package provides extended theorem environments
+% \usepackage{amsthm}
+\usepackage{amsmath}
+
+% The lineno packages adds line numbers. Start line numbering with
+% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+% for the whole article with \linenumbers after \end{frontmatter}.
+\usepackage{lineno}
+
+% I like to be in control
+\usepackage{placeins}
+
+% natbib.sty is loaded by default. However, natbib options can be
+% provided with \biboptions{...} command. Following options are
+% valid:
+
+%   round  -  round parentheses are used (default)
+%   square -  square brackets are used   [option]
+%   curly  -  curly braces are used      {option}
+%   angle  -  angle brackets are used    <option>
+%   semicolon  -  multiple citations separated by semi-colon
+%   colon  - same as semicolon, an earlier confusion
+%   comma  -  separated by comma
+%   numbers-  selects numerical citations
+%   super  -  numerical citations as superscripts
+%   sort   -  sorts multiple citations according to order in ref. list
+%   sort&compress   -  like sort, but also compresses numerical citations
+%   compress - compresses without sorting
+%
+% \biboptions{comma,round}
+
+% \biboptions{}
+
+
+% Katy Huff addtions
+\usepackage{xspace}
+\usepackage{color}
+
+\usepackage{multirow}
+\usepackage[hyphens]{url}
+
+
+\usepackage[acronym,toc]{glossaries}
+\include{acros}
+
+\makeglossaries
+
+%\journal{Annals of Nuclear Energy}
+
+\begin{document}
+
+%\begin{frontmatter}
+
+% Title, authors and addresses
+
+% use the tnoteref command within \title for footnotes;
+% use the tnotetext command for the associated footnote;
+% use the fnref command within \author or \address for footnotes;
+% use the fntext command for the associated footnote;
+% use the corref command within \author for corresponding author footnotes;
+% use the cortext command for the associated footnote;
+% use the ead command for the email address,
+% and the form \ead[url] for the home page:
+%
+% \title{Title\tnoteref{label1}}
+% \tnotetext[label1]{}
+% \author{Name\corref{cor1}\fnref{label2}}
+% \ead{email address}
+% \ead[url]{home page}
+% \fntext[label2]{}
+% \cortext[cor1]{}
+% \address{Address\fnref{label3}}
+% \fntext[label3]{}
+
+\title{Strategies for thorium fuel cycle transition in the SD-TMSR\\
+\large Response to Review Comments}
+\author{O. Ashraf, Andrei Rykhlevskii, G. V. Tikhomirov, Kathryn D. Huff}
+
+% use optional labels to link authors explicitly to addresses:
+% \author[label1,label2]{<author name>}
+% \address[label1]{<address>}
+% \address[label2]{<address>}
+
+
+%\author[uiuc]{Kathryn Huff}
+%        \ead{kdhuff@illinois.edu}
+%  \address[uiuc]{Department of Nuclear, Plasma, and Radiological Engineering,
+%        118 Talbot Laboratory, MC 234, Universicy of Illinois at
+%        Urbana-Champaign, Urbana, IL 61801}
+%
+% \end{frontmatter}
+\maketitle
+\section*{Review General Response}
+We would like to thank the reviewers for their detailed assessment of
+this paper. Your suggestions, clarifications, and comments have resulted in 
+changes which certainly improved the paper.
+
+
+\begin{questions}
+        \section*{Reviewer 1}
+
+        \question This work investigates the fuel cycle and neutronics performance of the Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR) with different fissile material based on an extended SERPENT-2 code. The whole paper states clearly.
+
+        \begin{solution}
+                Thank you very much for these comments. We appreciate your detailed review, which has certainly improved the paper. The manuscript has been enhanced and more detail is described regarding these changes in the specific comment responses below.
+        \end{solution}
+
+        %---------------------------------------------------------------------
+
+        \question In the SD-TMSR burnup calculation, how are the depletion regions and burnup time step defined?
+        \begin{solution}
+        		   
+        \end{solution}
+
+        %---------------------------------------------------------------------
+        \question During the molten salt reactor operation, part of fuel salt flows outside of reactor core then the fission reaction is not happened in external loop, however the decay reactions happens everywhere. In other words, during one burnup step, the fission reactions occur in only part of the time (depends on the ratio of time taken in fuel salt passing reactor core and external loop), and nuclides' decay or other reactions occur in the whole burnup step time. Have you considered this in SERPENT calculation?  
+        \begin{solution}
+		          
+        \end{solution}
+
+        %---------------------------------------------------------------------
+	
+        \section*{Reviewer 2}
+
+        %---------------------------------------------------------------------
+        \question Strategies for thorium fuel cycle transition by employing different startup fissile material and feed mechanisms were investigated for the single-fluid double-zoned thorium-based molten salt reactor (SD-TMSR) in this study, and some specific conclusions were obtained. While, realizing thorium fuel cycle transition by using different startup fissile material has already been well studied in the previous studies for different types of MSR, including SD-TMSR. The motivation (e.g., improvement from previous studies) for conducting this study is not clear. In addition, some statements in the paper are inaccurate and more interpretations should be provided to explain some obtained results. Therefore, a major revision is required to improve the manuscript.
+        
+        \begin{solution}
+                Thank you for these kind comments. Your suggestions have 
+                certainly improved the paper. 
+        \end{solution}
+
+        %---------------------------------------------------------------------
+
+        \question SD-TMSR concept development does not correctly described in the section "introduction", where it states that the SD-TMSR was introduced by the Chinese Academy of Sciences. Actually, SD-TMSR concept was proposed by ORNL as early as in the 1960s, which was called Molten salt breeding reactor (MSBR) (see Ref.: Tech. Rep. ORNL-4541). In addition, the study of reference 7 which was cited to illustrate SD-TMSR concept actually adopted the single-flow single-zone MSR rather than SD-TMSR.
+        
+        \begin{solution}
+                 
+        \end{solution}
+
+        %---------------------------------------------------------------------
+
+        \question The authors did not conduct a sufficient literature survey on the fuel cycle transition studies for the SD-TMSR concept. Cui. et al., have made an extensive study on fuel cycle transition for SD-TMSR by employing LEU and Pu as the startup fissile materials and two transition modes (in-core transition and ex-core transition) (see Ref.: Transition toward thorium fuel cycle in a molten salt reactor by using plutonium, NUCL SCI TECH (2017) 28:152; Possible scenarios for the transition to thorium fuel cycle in molten salt reactor by using enriched uranium. Progress in Nuclear Energy 104 (2018) 75-84). The state "For the SD-TMSR concept, simulating the fissile core startup and fuel cycle transition with other fissile materials (except U-233) has not studied before" in page 3 is therefore inaccurate.
+        \begin{solution}
+                Thank you for your helpful review.  
+        \end{solution}
+
+        %---------------------------------------------------------------------
+        
+
+        \question More details should be provided to illustrate the heavy metal addition for the thorium feed mechanism and non-thorium feed mechanism in page 11. It is hard to understand why the mass of Th / external heavy metals (excluding Th) is approximately equal to the mass of extracted Pa.
+        \begin{solution}
+               Thank you for these kind comments. Your suggestions have certainly improved the paper.
+        \end{solution}
+
+        %--------------------------------------------------------------------
+
+        \question Phenomenons presented in Figure 3 that K-eff for the case of Pu+HALEU firstly increases and then decreases, and the time to become subcritical for the case of reactor-grade Pu is longest (except the case of U-233) should be explained.
+        \begin{solution}
+                 Thank you for your kind review.  
+        \end{solution}
+
+        %--------------------------------------------------------------------
+        \question In page 19, why the Pa extraction time was selected to be 30s since Pa is neither the gaseous FPs nor the non-dissolved metals?
+        \begin{solution}
+                  
+        \end{solution}
+
+        %--------------------------------------------------------------------
+        \question For Figure 9, it is inaccurate to state that the mass of U-233 reaches equilibrium after ~30 years, apparently from the figure, we can observe that the mass of U-233 for three of the cases still increase/decrease after 30 years.
+        
+        \begin{solution}
+                Thank you for the excellent point. The whole statement has been modified to read:
+                
+                
+                
+        \end{solution}
+
+        %--------------------------------------------------------------------
+        \question Regarding to Figure 10, reasons should be provided to explain why the time achieving Pu solubility limit for the case of TRU is shorter than that of the case of reactor-grade Pu.
+        \begin{solution}
+                 This has now been clarified in the text.
+        \end{solution}
+
+        %--------------------------------------------------------------------
+        \question It is hard to understand that the neutron spectrum of TRU case at BOL is softer than U-233 case since TRU has a greater amount of thermal neutron absorbers and the fissile material is dominated by Pu which would generate hard neutron spectrum.
+        
+        \begin{solution}
+                 Thank you for the 
+        \end{solution}
+
+        %--------------------------------------------------------------------
+        \question More details should be provided to explain the radial neutron flux distribution for the cases of Pu reactor-grade and TRU presented in Fig.13 and 14. For both the radial fast and thermal neutron flux change from BOL to EOL, why it is much larger for Pu reactor-grade case compared with TRU case. In addition, the state "In contrast, for the reactor-grade Pu and TRU cases, significant changes are observed for thermal neutron flux in the outer core zone and reactor" is inaccurate, apparently from Figure 14, it can be seen that the Pu reactor-grade (initial) case has a small change in the outer core zone and reflector.
+        \begin{solution}
+                Thanks  
+        \end{solution}
+
+        %--------------------------------------------------------------------
+        \question Regarding to the FTC for three different cases, reasons should be provided to explain why spectrum softening will positively affects the FTC since generally harder neutron spectrum would benefit FTC.
+        \begin{solution}
+                Thank  
+        \end{solution}
+
+        %--------------------------------------------------------------------
+        \question It seems unclear why (what is the purpose) to conduct the study of six factor analysis.
+        \begin{solution}
+                 Thanks  
+        \end{solution}
+
+        %--------------------------------------------------------------------
+        \question Making the full definition for abbreviation through the whole paper is not necessary, such as SD-TMSR, first time is enough.
+        
+        \begin{solution}
+                Thank you for your insightful comment.
+        \end{solution}
+
+        %--------------------------------------------------------------------
+
+        
+        
+\end{questions}
+\bibliographystyle{elsarticle-num}
+\bibliography{../2019-Scenarios}
+\end{document}
+
+%
+% End of file `elsarticle-template-num.tex'.
