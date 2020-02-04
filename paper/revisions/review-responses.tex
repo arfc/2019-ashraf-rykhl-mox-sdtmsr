@@ -160,12 +160,19 @@ changes which certainly improved the paper.
 
         \question In the SD-TMSR burnup calculation, how are the depletion regions and burnup time step defined?
         \begin{solution}
+        		  Thank you for the excellent point.
+        		  
+        		  About depletion regions definition: we used depletion mode 1 in Serpent-2 (i.e. burn 1), this means that the fuel material is not divided and all occurrences of it are treated as a single depletion zone. The fuel is liquid -it well- mixed all the time due to turbulent flow and mixing in the pump.
         		   
+        		  About burnup time step definition: it is time interval given in days. During burnup time step the SD-TMSR should be critical and total fuel mass is almost constant (dm $\leq$ 0.1\%). We started our calculations by 30 days' time step but we do not find significant changes in K$_{eff}$ when we increased the time step to 365 days. The maximum change in K$_{eff}$ was $\leq$ 0.02\%), therefore we adopted 365-day as a time step for the following calculations.
+        		  
+        		  
         \end{solution}
 
         %---------------------------------------------------------------------
         \question During the molten salt reactor operation, part of fuel salt flows outside of reactor core then the fission reaction is not happened in external loop, however the decay reactions happens everywhere. In other words, during one burnup step, the fission reactions occur in only part of the time (depends on the ratio of time taken in fuel salt passing reactor core and external loop), and nuclides' decay or other reactions occur in the whole burnup step time. Have you considered this in SERPENT calculation?  
         \begin{solution}
+		          Thank you for your insightful comment. We usually use total fuel salt inventory in the primary loop to define the fuel material in the SERPENT input. Moreover, we should reduce power density accordingly because fission takes place only in the core. In our calculations, we introduce the total power instead of power density and SERPENT automatically divides total power by total fuel volume. 
 		          
         \end{solution}
 
@@ -177,8 +184,7 @@ changes which certainly improved the paper.
         \question Strategies for thorium fuel cycle transition by employing different startup fissile material and feed mechanisms were investigated for the single-fluid double-zoned thorium-based molten salt reactor (SD-TMSR) in this study, and some specific conclusions were obtained. While, realizing thorium fuel cycle transition by using different startup fissile material has already been well studied in the previous studies for different types of MSR, including SD-TMSR. The motivation (e.g., improvement from previous studies) for conducting this study is not clear. In addition, some statements in the paper are inaccurate and more interpretations should be provided to explain some obtained results. Therefore, a major revision is required to improve the manuscript.
         
         \begin{solution}
-                Thank you for these kind comments. Your suggestions have 
-                certainly improved the paper. 
+                Thank you very much for these comments. We appreciate your detailed review, which has certainly improved the paper. The manuscript has been enhanced and more detail is described regarding these changes in the specific comment responses below.
         \end{solution}
 
         %---------------------------------------------------------------------

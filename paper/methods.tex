@@ -182,9 +182,13 @@ Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR) full-core w
 of SERPENT accounts for continuous online reprocessing and refueling 
 \cite{aufiero2013extended}. The ENDF-VII.0 cross section library was used for all 
 calculations in this work. The results demonstrate full-core runs of 
-$1.25\times 10^7$ neutron histories per depletion step. The full burnup time of 
+$1.25\times 10^7$ neutron histories per depletion step. During depletion step the SD-TMSR should be critical and total fuel mass is almost constant (dm $\leq$ 0.1\%). We started our calculations by 30 days' time step but we do not find significant changes in K$_{eff}$ when we increased the time step to 365 days. The maximum change in K$_{eff}$ was $\leq$ 0.02\%), therefore we adopted 365-day as a time step for the following calculations.
+The full burnup time of 
 the SD-TMSR was 60 years with statistical error in $k_{eff}$ equal to $\pm$ 
-$12$ $pcm$. The online extraction of \gls{FPs} and other neutron absorbers 
+$12$ $pcm$. 
+During the molten salt reactor operation, part of fuel salt flows outside of reactor core then the fission reaction is not happened in external loop, however the decay reactions happens everywhere. We use total fuel salt inventory in the primary loop to define the fuel material in the SERPENT input. Moreover, we should reduce power density accordingly because fission takes place only in the core. In our calculations, we introduce the total power instead of power density and SERPENT automatically divides total power by total fuel volume.
+
+The online extraction of \gls{FPs} and other neutron absorbers 
 provides many benefits for MSRs. For example, it has the potential to reduce the initial 
 fissile material inventory required to achieve criticality and improve the 
 breeding ratio. Figure~\ref{fig:flow} shows a flow chart of the calculation 
