@@ -181,10 +181,16 @@ refueling \cite{serp2014molten}. In this work, SERPENT-2 version 2.1.31 \cite{le
 Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR) full-core with various initial fuel types. This extension 
 of SERPENT accounts for continuous online reprocessing and refueling 
 \cite{aufiero2013extended}. The ENDF-VII.0 cross section library was used for all 
-calculations in this work. The results demonstrate full-core runs of 
-$1.25\times 10^7$ neutron histories per depletion step. The full burnup time of 
+calculations in this work. The results demonstrate full-core runs of
+$1.25\times 10^7$ neutron histories per depletion step. During the depletion step, the core was maintained critical and total fuel mass was almost constant (dm $\leq$ 0.1\%). To determine the appropriate depletion step size, we conducted a time step refinement study. We started with $\Delta t=30$days and gradually increased the depletion time step until the error in K$_{eff}$ became significant. For $\Delta t=1$year the maximum change in K$_{eff}$ was $\leq$ 0.02\%), therefore we adopted a constant, 365-day-long time step for all simulation in this work.
+The full burnup time of 
 the SD-TMSR was 60 years with statistical error in $k_{eff}$ equal to $\pm$ 
-$12$ $pcm$. The online extraction of \gls{FPs} and other neutron absorbers 
+$12$ $pcm$. 
+During the molten salt reactor operation, part of fuel salt flows outside of the reactor core then the fission reaction has not happened in the external loop, however, the decay reactions happen everywhere. We used total fuel salt inventory in the primary loop to define the fuel material in the SERPENT input. Moreover, we accordingly adjusted power density in SERPENT burnup calculations because fission takes place only in the core region.
+
+The fuel is liquid -it well- mixed all the time due to turbulent flow and mixing in the pump. We used depletion mode 1 in Serpent-2 (i.e. burn 1), this means that the fuel material is not divided and all occurrences of it are treated as a single depletion zone. 
+
+The online extraction of \gls{FPs} and other neutron absorbers 
 provides many benefits for MSRs. For example, it has the potential to reduce the initial 
 fissile material inventory required to achieve criticality and improve the 
 breeding ratio. Figure~\ref{fig:flow} shows a flow chart of the calculation 
