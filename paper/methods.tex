@@ -178,7 +178,7 @@ Table~\ref{tab:table5}.
 Simulation of liquid-fueled Molten Salt Reactor (MSR) systems requires 
 computational software that can support online fuel salt reprocessing and 
 refueling \cite{serp2014molten}. In this work, SERPENT-2 version 2.1.31 \cite{leppanen2014serpent} simulates the 
-Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR) full-core with various initial fuel types. This extension 
+SD-TMSR full-core with various initial fuel types. This extension 
 of SERPENT accounts for continuous online reprocessing and refueling 
 \cite{aufiero2013extended}. The ENDF-VII.0 cross section library was used for all 
 calculations in this work. The results demonstrate full-core runs of
@@ -230,11 +230,11 @@ criticality and to keep fuel salt mass constant during burnup. The continuous fe
 	\item The simulation starts without injecting refueling materials (i.e. only removing FPs and Pa).
 	\item After the first depletion calculation step, we check the total mass density of FPs and Pa in the \texttt{FP-waste tank} and \texttt{Pa-decay tank}, respectively.
 	\item A simple calculation yields the amount of heavy metal that must be added during this cycle:
-	\subitem 3a. \textbf{Thorium feed mechanism}: mass of Th $\approx$ mass of extracted FPs and mass of $^{233}$U $\approx$ mass of extracted Pa.
-	\subitem 3b. \textbf{Non-thorium feed mechanism}: mass of external heavy metals (excluding Th) $\approx$ mass of extracted FPs and mass of $^{233}$U $\approx$ mass of extracted Pa.
-	\item Dividing this mass by time and inventory of refueling material gives the corresponding feed constant.
+	\subitem 3a. \textbf{Thorium feed mechanism}: mass of injected $^{233}$U $\approx$ mass of extracted Pa and mass of injected Th $\approx$ mass of extracted FPs to maintain the total fuel mass constant.
+	\subitem 3b. \textbf{Non-thorium feed mechanism}: mass of injected $^{233}$U $\approx$ mass of extracted Pa and mass of injected fuel (i.e., HALEU, Pu mixed with HALEU, reactor-grade Pu, or TRU) $\approx$ mass of extracted FPs to maintain the total fuel mass constant.
+	\item Dividing this mass by time and inventory of refueling material gives the corresponding feed constant (1/s).
 \end{enumerate}
-The cycle calculation runs iteratively until the burnup reaches the desired worth.
+In both feed mechanisms (thorium and non-thorium) we continuously added $^{233}$U and the mass of injected $^{233}$U is equal to the mass of extracted Pa ($^{233}$Pa decays to $^{233}$U after $\approx$ 27 d). To keep the total fuel mass almost constant, for \textbf{thorium feed mechanism}, the mass of injected Th must be equal to the mass of extracted FPs and for \textbf{non-thorium feed mechanism}, the mass of injected fuel (i.e., HALEU, Pu mixed with HALEU, reactor-grade Pu, or TRU) must be equal to the mass of extracted FPs.
 
 \section{Feed and extraction rates} \label{Feed-and-extraction-rates}
 In the present work, two different feed mechanisms are used: (1) thorium and (2) non-thorium.

@@ -201,6 +201,11 @@ changes which certainly improved the paper.
         \question SD-TMSR concept development does not correctly described in the section "introduction", where it states that the SD-TMSR was introduced by the Chinese Academy of Sciences. Actually, SD-TMSR concept was proposed by ORNL as early as in the 1960s, which was called Molten salt breeding reactor (MSBR) (see Ref.: Tech. Rep. ORNL-4541). In addition, the study of reference 7 which was cited to illustrate SD-TMSR concept actually adopted the single-flow single-zone MSR rather than SD-TMSR.
         
         \begin{solution}
+                 Thank you for catching this. The whole statement has been modified to read:\\
+                 The Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR) with a thermal power of 2,250
+                 MW$_{th}$ was proposed for the first time by ORNL as early as in the 1960s, which was called Molten salt breeding reactor (MSBR) \cite{robertson_conceptual_1971}.
+                 
+                 Thank you for catching this. Reference 7 has been removed from the paragraph.
                  
         \end{solution}
 
@@ -208,7 +213,11 @@ changes which certainly improved the paper.
 
         \question The authors did not conduct a sufficient literature survey on the fuel cycle transition studies for the SD-TMSR concept. Cui. et al., have made an extensive study on fuel cycle transition for SD-TMSR by employing LEU and Pu as the startup fissile materials and two transition modes (in-core transition and ex-core transition) (see Ref.: Transition toward thorium fuel cycle in a molten salt reactor by using plutonium, NUCL SCI TECH (2017) 28:152; Possible scenarios for the transition to thorium fuel cycle in molten salt reactor by using enriched uranium. Progress in Nuclear Energy 104 (2018) 75-84). The state "For the SD-TMSR concept, simulating the fissile core startup and fuel cycle transition with other fissile materials (except U-233) has not studied before" in page 3 is therefore inaccurate.
         \begin{solution}
-                Thank you for your helpful review.  
+                Thank you for your helpful review. The state "For the SD-TMSR concept, simulating the fissile core startup and fuel cycle transition with other fissile materials (except$^{233}$U) has not studied before" in page 3, has been removed. 
+                
+                Also, the mentioned references have been added as following:\\
+                Cui \emph{et al.} (2017-2018) used an in-house developed tool to study the thorium fuel cycle transition based on MSBR by employing enriched uranium and Pu as the startup fissile materials. Two scenarios, a Breeding and Burning (B\&B) scenario and a Pre-breeding scenario, were investigated to achieve the fuel cycle transition. Cui \emph{et al.} found that the fuel transition can be achieved by using: (1) enriched uranium with greater than 40\% concentration of $^{235}$U (2) Pu from LWR (burn-up of 60 GWd/t) spent nuclear fuel by applying 60 days of chemical reprocessing \cite{cui2017transition,cui2018possible}.
+                
         \end{solution}
 
         %---------------------------------------------------------------------
@@ -216,7 +225,19 @@ changes which certainly improved the paper.
 
         \question More details should be provided to illustrate the heavy metal addition for the thorium feed mechanism and non-thorium feed mechanism in page 11. It is hard to understand why the mass of Th / external heavy metals (excluding Th) is approximately equal to the mass of extracted Pa.
         \begin{solution}
-               Thank you for these kind comments. Your suggestions have certainly improved the paper.
+               Thank you for the comment. Actually, in page 11, we mention that the mass of Th / external heavy metals is approximately equal to the mass of extracted Fission products (FPs) and not Pa. Because in both feed mechanisms (thorium and non-thorium) we continuously added $^{233}$U and the mass of injected $^{233}$U is equal to the mass of extracted Pa ($^{233}$Pa decays to $^{233}$U after $\approx$ 27 d). To keep the total fuel mass almost constant, for \textbf{thorium feed mechanism}, the mass of injected Th must be equal to the mass of extracted FPs and for \textbf{non-thorium feed mechanism}, the mass of injected fuel (i.e., HALEU, Pu mixed with HALEU, reactor-grade Pu, or TRU) must be equal to the mass of extracted FPs.
+              
+               Moreover, we rewrite the paragraph in page 11 to address this thought:\\
+               \begin{enumerate}
+               	\item The simulation starts without injecting refueling materials (i.e. only removing FPs and Pa).
+               	\item After the first depletion calculation step, we check the total mass density of FPs and Pa in the \texttt{FP-waste tank} and \texttt{Pa-decay tank}, respectively.
+               	\item A simple calculation yields the amount of heavy metal that must be added during this cycle:
+               	\subitem 3a. \textbf{Thorium feed mechanism}: mass of injected $^{233}$U $\approx$ mass of extracted Pa and mass of injected Th $\approx$ mass of extracted FPs to maintain the total fuel mass constant.
+               	\subitem 3b. \textbf{Non-thorium feed mechanism}: mass of injected $^{233}$U $\approx$ mass of extracted Pa and mass of injected fuel (i.e., HALEU, Pu mixed with HALEU, reactor-grade Pu, or TRU) $\approx$ mass of extracted FPs to maintain the total fuel mass constant.
+               	\item Dividing this mass by time and inventory of refueling material gives the corresponding feed constant (1/s).
+               \end{enumerate}
+               In both feed mechanisms (thorium and non-thorium) we continuously added $^{233}$U and the mass of injected $^{233}$U is equal to the mass of extracted Pa ($^{233}$Pa decays to $^{233}$U after $\approx$ 27 d). To keep the total fuel mass almost constant, for \textbf{thorium feed mechanism}, the mass of injected Th must be equal to the mass of extracted FPs and for \textbf{non-thorium feed mechanism}, the mass of injected fuel (i.e., HALEU, Pu mixed with HALEU, reactor-grade Pu, or TRU) must be equal to the mass of extracted FPs.
+               
         \end{solution}
 
         %--------------------------------------------------------------------
@@ -277,7 +298,7 @@ changes which certainly improved the paper.
         \question Making the full definition for abbreviation through the whole paper is not necessary, such as SD-TMSR, first time is enough.
         
         \begin{solution}
-                Thank you for your insightful comment.
+                Thank you for the information. The full definition for abbreviation through the whole paper has been removed as requested.
         \end{solution}
 
         %--------------------------------------------------------------------
