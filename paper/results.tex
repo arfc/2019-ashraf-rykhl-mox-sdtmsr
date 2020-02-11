@@ -25,9 +25,9 @@ Notably, the molar fractions of \gls{HALEU} and reactor-grade Pu in the initial 
 more. Consequently, the initial $k_{eff}$ for these cases increased (Figure~\ref{fig:keff1} (HALEU and reactor-grade Pu cases)).
 For the HALEU fuel salt, the amount of $^{233}$U generated in the SD-TMSR after a few years is insufficient to counteract the absorption of the (non-fissile) $^{238}$U added at start-up after much of the original $^{235}$U is depleted. Consequently, the core becomes subcritical after $\approx$ $6$ years of operation.
 
-For Pu+HALEU case, K${_eff}$ firstly increases during the first $\approx$ $3$ EFPY and then gradually decreases. This is due to the conversion of $^{238}$U from HALEU into fissile plutonium, which often produces the majority of the neutrons until the transition to Th/$^{233}$U fuel cycle. Figure~\ref{fig:diffPuAll811} shows the variation in fissile plutonium isotopes ($^{239}$Pu , $^{241}$Pu, and $^{243}$Pu) inventory during reactor operation. For TRU and reactor-grade Pu, the fissile plutonium isotopes are gradually depleted, during operating (the fissile material is dominated by Pu in these cases). For HALEU case, the fissile material is dominated by $^{235}$U, however, $^{238}$U is converted into fissile plutonium. Therefore, the mass of fissile plutonium increases during operating but its value still relatively low. For Pu+HALEU case, the mass of the fissile plutonium isotopes increases within the first $\approx$ $3$ EFPY and then decreases. The reactivity from the produced Pu is much greater than the depletion of the initial reactivity (due to the depletion of initial fissile isotopes), consequently, K${_eff}$ increases during the first $\approx$ $3$ years and then decreases; the amount of $^{233}$U generated in the Pu+HALEU case is insufficient to maintain the reactor criticality and counteract neutron absorption in non-fissile isotopes.
+For Pu+HALEU case, $k_{eff}$ firstly increases during the first $\approx$ $3$ EFPY and then gradually decreases. This is due to the conversion of $^{238}$U from HALEU into fissile plutonium, which often produces the majority of the neutrons until the transition to Th/$^{233}$U fuel cycle. Figure~\ref{fig:diffPuAll811} shows the variation in fissile plutonium isotopes ($^{239}$Pu , $^{241}$Pu, and $^{243}$Pu) inventory during reactor operation. For TRU and reactor-grade Pu, the fissile plutonium isotopes are gradually depleted, during operating (the fissile material is dominated by Pu in these cases). For HALEU case, the fissile material is dominated by $^{235}$U, however, $^{238}$U is converted into fissile plutonium. Therefore, the mass of fissile plutonium increases during operating but its value still relatively low. For Pu+HALEU case, the mass of the fissile plutonium isotopes increases within the first $\approx$ $3$ EFPY and then decreases. The reactivity from the produced Pu is much greater than the depletion of the initial reactivity (due to the depletion of initial fissile isotopes), consequently, $k_{eff}$ increases during the first $\approx$ $3$ years and then decreases; the amount of $^{233}$U generated in the Pu+HALEU case is insufficient to maintain the reactor criticality and counteract neutron absorption in non-fissile isotopes.
 
-Figure~\ref{fig:keff1} shows that the decrease in K${_eff}$ for reactor-grade Pu case occurs at the much later operating time than for other cases because the neutron spectrum in the reactor-grade Pu initial core is hardened; more $^{232}$Th is being converted to $^{233}$U. Nevertheless, this amount of the $^{233}$U is not enough to counteract the neutron absorption in the non-fissile Pu isotopes after much of the $^{239}$Pu and $^{241}$Pu is depleted \cite{betzler2016modeling}.
+Figure~\ref{fig:keff1} shows that the decrease in $k_{eff}$ for reactor-grade Pu case occurs at the much later operating time than for other cases because the neutron spectrum in the reactor-grade Pu initial core is hardened; more $^{232}$Th is being converted to $^{233}$U. Nevertheless, this amount of the $^{233}$U is not enough to counteract the neutron absorption in the non-fissile Pu isotopes after much of the $^{239}$Pu and $^{241}$Pu is depleted \cite{betzler2016modeling}.
 
 \begin{figure}
 	\centering
@@ -104,15 +104,18 @@ $2.0$ $kg/d$, respectively.
 Figures~\ref{fig:inventoryCCCC} and~\ref{fig:inventoryPu_TRUCCC} demonstrate 
 the evolution of important nuclide inventories for the $^{233}$U, Pu, and TRU cases 
 respectively. For the $^{233}$U case (Figure~\ref{fig:inventoryCCCC}), the mass of Pa in the fuel salt is almost constant and reaches 
-$17.8$  $kg$ at the end of the operation time. 
+$17.8$ $kg$ at the end of the operation time. 
 Additionally, the mass of minor actinides (MA) and Pu increases with time. The level of Pu in the fuel salt correlates with the mass of the MA; however, MA need more time to reach equilibrium than Pu. Uranium inventory increases during 
 operation and reaches equilibrium after $\approx$ $27$ years. Figure~\ref{fig:inventoryCCCC} shows that refueling the core with thorium helps 
 maintain an almost constant inventory throughout the full operation time. 
-For the Pu and TRU cases (Figure~\ref{fig:inventoryPu_TRUCCC}), the Pa extraction time was selected to be 30 s 
-to avoid poisoning the core. Figure~\ref{fig:inventoryPu_TRUCCC} shows that the mass of Pa in the fuel salt 
+
+The target is to maintain the core criticality for a long period of time without any external feed of $^{233}$U. Figure~\ref{fig:Keff_U2332} shows how Reprocessing Period (RP) affects the $k_{eff}$ and amount of $^{233}$U in the \texttt{Pa-decay tank} for the TRU-started SD-TMSR. The fast extraction of Pa from the core (RP = $30$ $s$) leads to long operating time. Also, a relatively large amount of $^{233}$U can be obtained when we applied RP = $30$ $s$ against $10.59$ $d$. The RP equal to $10.59$ $d$ is not suitable for TRU and reactor-grade Pu cases because additional $^{233}$U was required to supply the core after startup. Therefore, we selected the RP = $30$ $s$. This produces $^{233}$U in the \texttt{Pa-decay tank} barely enough to operate the TRU-started SD-TMSR for a long period of time ($\approx$ $40$ years). For reactor-grade Pu case, the produced $^{233}$U is sufficient to maintain the core criticality within the 60-years of operation (see Figure~\ref{fig:keff2}).
+
+Figure~\ref{fig:inventoryPu_TRUCCC} shows that the mass of Pa in the fuel salt 
 is relatively low when compared to Pa mass in the $^{233}$U case (Figure~\ref{fig:inventoryCCCC}). Major 
 elements for all three cases reach the equilibrium state after $\approx$ $30$ 
 years (see Figure~\ref{fig:inventoryCCCC} and~\ref{fig:inventoryPu_TRUCCC}).
+
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{inventoryCCCC.png}
@@ -121,6 +124,15 @@ years (see Figure~\ref{fig:inventoryCCCC} and~\ref{fig:inventoryPu_TRUCCC}).
 		startup fuel (MA involves Np, Am, Cm) \cite{ashraf2019whole_core}.}
 	\label{fig:inventoryCCCC}
 \end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{Keff_U2332.png}
+	\vspace{-0.5in}
+	\caption{The effect of Reprocessing Period (RP) on the $k_{eff}$ and amount of $^{233}$U in the \texttt{Pa-decay tank} for the TRU-started SD-TMSR.}
+	\label{fig:Keff_U2332}
+\end{figure}
+
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{inventoryPu_TRUCCC.png}
