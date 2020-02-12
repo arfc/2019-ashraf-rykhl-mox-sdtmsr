@@ -29,13 +29,7 @@ For Pu+HALEU case, $k_{eff}$ firstly increases during the first $\approx$ $3$ EF
 
 Figure~\ref{fig:keff1} shows that the decrease in $k_{eff}$ for reactor-grade Pu case occurs at the much later operating time than for other cases because the neutron spectrum in the reactor-grade Pu initial core is hardened; more $^{232}$Th is being converted to $^{233}$U. Nevertheless, this amount of the $^{233}$U is not enough to counteract the neutron absorption in the non-fissile Pu isotopes after much of the $^{239}$Pu and $^{241}$Pu is depleted \cite{betzler2016modeling}.
 
-\begin{figure}
-	\centering
-	\includegraphics[width=\textwidth]{diffPuAll811.png}
-		\vspace{-0.5in}
-	\caption{The variation of relative mass of fissile Pu ($^{239}$Pu , $^{241}$Pu, and $^{243}$Pu) during reactor operation.} 
-	\label{fig:diffPuAll811}
-\end{figure}
+
 
 \begin{figure}
 	\centering
@@ -43,6 +37,14 @@ Figure~\ref{fig:keff1} shows that the decrease in $k_{eff}$ for reactor-grade Pu
 	\vspace{-0.5in}
 	\caption{The change of the effective multiplication factor during 60 \gls{EFPY} of reactor operation for thorium feed mechanism (confidence interval $\pm\sigma$ is shaded).} 
 	\label{fig:keff1}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{diffPuAll811.png}
+	\vspace{-0.5in}
+	\caption{The variation of relative mass of fissile Pu ($^{239}$Pu , $^{241}$Pu, and $^{243}$Pu) during reactor operation.} 
+	\label{fig:diffPuAll811}
 \end{figure}
 
 \subsection{Non-thorium feed mechanism}
@@ -112,7 +114,7 @@ maintain an almost constant inventory throughout the full operation time.
 The target is to maintain the core criticality for a long period of time without any external feed of $^{233}$U. Figure~\ref{fig:Keff_U2332} shows how Reprocessing Period (RP) affects the $k_{eff}$ and amount of $^{233}$U in the \texttt{Pa-decay tank} for the TRU-started SD-TMSR. The fast extraction of Pa from the core (RP = $30$ $s$) leads to long operating time. Also, a relatively large amount of $^{233}$U can be obtained when we applied RP = $30$ $s$ against $10.59$ $d$. The RP equal to $10.59$ $d$ is not suitable for TRU and reactor-grade Pu cases because additional $^{233}$U was required to supply the core after startup. Therefore, we selected the RP = $30$ $s$. This produces $^{233}$U in the \texttt{Pa-decay tank} barely enough to operate the TRU-started SD-TMSR for a long period of time ($\approx$ $40$ years). For reactor-grade Pu case, the produced $^{233}$U is sufficient to maintain the core criticality within the 60-years of operation (see Figure~\ref{fig:keff2}).
 
 Figure~\ref{fig:inventoryPu_TRUCCC} shows that the mass of Pa in the fuel salt 
-is relatively low when compared to Pa mass in the $^{233}$U case (Figure~\ref{fig:inventoryCCCC}). Major 
+is relatively low when compared with Pa mass in the $^{233}$U case (Figure~\ref{fig:inventoryCCCC}). Major 
 elements for all three cases reach the equilibrium state after $\approx$ $30$ 
 years (see Figure~\ref{fig:inventoryCCCC} and~\ref{fig:inventoryPu_TRUCCC}).
 
@@ -426,7 +428,7 @@ robertson_conceptual_1971}.
 
 Even after 30 years of operation, the total temperature coefficient of 
 reactivity remains relatively large and negative (in the range between $-2.59$ 
-and $-5.06$ pcm/K) compared to the conventional \gls{PWR}, which has 
+and $-5.06$ pcm/K) compared with the conventional \gls{PWR}, which has 
 temperature coefficient of about $-1.71$ $pcm/^{\circ}F\approx -3.08$ $pcm/K$ 
 \cite{forget_integral_2018}, and allows excellent reactor stability and 
 control. The additional analysis must be performed taking graphite moderator 
