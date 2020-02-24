@@ -1,15 +1,15 @@
 \section{Model description} \label{Model-description}
 \subsection{Geometry}
-The Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR) design model was introduced by the Chinese Academy of Sciences as a part of  
+The SD-TMSR design model was introduced by the Chinese Academy of Sciences as a part of  
 the strategic project ``Thorium-based Molten-Salt Reactor(TMSR) nuclear energy system" 
 \cite{jiang2012advanced,li2015analysis,li_optimization_2018}. The 
-design of the \gls{SD-TMSR} is inspired by the \gls{MSBR} 
+design of the SD-TMSR is inspired by the \gls{MSBR} 
 \cite{robertson_conceptual_1971} after modifying the geometry to 
 control the positive moderator temperature coefficient in the MSBR. Li \emph{et al.} and Ashraf \emph{et al.} 
-described the \gls{SD-TMSR} core 
+described the SD-TMSR core 
 geometry in \cite{li_optimization_2018,ashraf2019whole_core}. 
 Figure~\ref{fig:ff} illustrates the quarter-core view of the 
-\gls{SD-TMSR}.
+SD-TMSR.
 The active zone is a right cylinder with height and diameter 
 equal to 460 cm. Assemblies of graphite\footnote{We choose graphite density of 
 $2.3$ g/cm$^3$, to validate our results against results in literature 
@@ -21,9 +21,9 @@ Th/$^{233}$U breeding performance; the radii of the fuel channels in the
 outer and inner zone are 5 and 3.5 cm, respectively. The axial and radial 
 graphite reflectors surround the core to minimize neutron leakage and 
 maximize flux in the core. B${_4}$C cylinder surrounds the reflectors and 
-acts as radiation shielding. The \gls{SD-TMSR} pressure vessel is made of a Ni-based (hastelloy N) alloy holds 
+acts as radiation shielding. The SD-TMSR pressure vessel is made of a Ni-based (hastelloy N) alloy holds 
 the fuel salt, graphite elements, reflector, shielding, and intermediate heat exchanger. The main 
-characteristics of the \gls{SD-TMSR} are listed in Table~\ref{tab:table1}.
+characteristics of the SD-TMSR are listed in Table~\ref{tab:table1}.
 
 \begin{figure} % replace 't' with 'b' to \centering [hbp!]
 	\includegraphics[width=\textwidth]{ff.png}
@@ -66,7 +66,7 @@ The general composition of the startup liquid fuel salt in this work is 70LiF -
 thorium and one of these fissile materials: \gls{HALEU}, Pu mixed with \gls{HALEU}, reactor-grade Pu, \gls{TRU}, and $^{233}$U), and $N$ is dependent on the chosen fissile material and the thermochemical state of the liquid fuel salt.
 
 The aim of this paper is to simulate the  
-operation of the \gls{SD-TMSR} for 60 years with various startup fissile 
+operation of the SD-TMSR for 60 years with various startup fissile 
 compositions and without any external feed of fissile $^{233}$U which we 
 assume is unavailable. For that reason, five different types of initial 
 fissile materials are considered based on \gls{HALEU}, Pu, and \gls{TRU} from Light Water
@@ -181,13 +181,13 @@ SD-TMSR full-core with various initial fuel types. This extension
 of SERPENT accounts for continuous online reprocessing and refueling 
 \cite{aufiero2013extended}. The ENDF-VII.0 cross section library was used for all 
 calculations in this work. The results demonstrate full-core runs of
-$1.25\times 10^7$ neutron histories per depletion step. During the depletion step, the core was maintained critical and total fuel mass was almost constant (dm $\leq$ 0.1\%). To determine the appropriate depletion step size, we conducted a time step refinement study. We started with $\Delta t=30$days and gradually increased the depletion time step until the error in K$_{eff}$ became significant. For $\Delta t=1$year the maximum change in K$_{eff}$ was $\leq$ 0.02\%), therefore we adopted a constant, 365-day-long time step for all simulation in this work.
+$1.25\times 10^7$ neutron histories per depletion step. During the depletion step, the core was maintained critical and total fuel mass was almost constant (dm $\leq$ 0.1\%). To determine the appropriate depletion step size, we conducted a time step refinement study. We started with $\Delta t=30$ days and gradually increased the depletion time step until the error in K$_{eff}$ became significant. The difference in $k_{eff}$ between $\Delta t=1$ year and $\Delta t=30$ days was $\leq$ 0.02\%; thus, we adopted a constant, 365-day-long time step for all simulation in this work.
 The full burnup time of 
 the SD-TMSR was 60 years with statistical error in $k_{eff}$ equal to $\pm$ 
 $12$ $pcm$. 
-During the molten salt reactor operation, part of fuel salt flows outside of the reactor core then the fission reaction has not happened in the external loop, however, the decay reactions happen everywhere. We used total fuel salt inventory in the primary loop to define the fuel material in the SERPENT input. Moreover, we accordingly adjusted power density in SERPENT burnup calculations because fission takes place only in the core region.
+During the molten salt reactor operation, part of fuel salt flows outside of the reactor core then the fission reaction has not happened in the external loop, however, the decay reactions happen everywhere. We used total fuel salt inventory in the primary loop to define the fuel material in the SERPENT input. Moreover, we accordingly adjusted power density in SERPENT burnup calculations because fission takes place only in the core region. But we did not consider processes, such as decay, which occurs outside of the core. Also, the drift of the delayed neutron precursors is not examined in this paper, but discussion about this can be found in \cite{zhang2018review}.     
 
-The fuel is liquid -it well- mixed all the time due to turbulent flow and mixing in the pump. We used depletion mode 1 in Serpent-2 (i.e. burn 1), this means that the fuel material is not divided and all occurrences of it are treated as a single depletion zone. 
+The liquid fuel is well-mixed all the time due to turbulent flow and mixing in the pump. We used the depletion mode 1 in SERPENT-2 (i.e. burn 1), which means that the fuel material is treated as a single depletion zone. 
 
 The online extraction of \gls{FPs} and other neutron absorbers 
 provides many benefits for MSRs. For example, it has the potential to reduce the initial 
