@@ -229,11 +229,20 @@ criticality and to keep fuel salt mass constant during burnup. The continuous fe
 	\item The simulation starts without injecting refueling materials (i.e. only removing FPs and Pa).
 	\item After the first depletion calculation step, we check the total mass density of FPs and Pa in the \texttt{FP-waste tank} and \texttt{Pa-decay tank}, respectively.
 	\item A simple calculation yields the amount of heavy metal that must be added during this cycle:
-	\subitem 3a. \textbf{Thorium feed mechanism}: mass of injected $^{233}$U $\approx$ mass of extracted Pa and mass of injected Th $\approx$ mass of extracted FPs to maintain the total fuel mass constant.
+	\subitem 3a. \textbf{Thorium feed mechanism}: mass of injected $^{233}$U 
+	$\approx$ mass of extracted Pa and mass of injected $^{232}$Th $\approx$ 
+	mass of extracted FPs to maintain the total fuel mass constant.
 	\subitem 3b. \textbf{Non-thorium feed mechanism}: mass of injected $^{233}$U $\approx$ mass of extracted Pa and mass of injected fuel (i.e., HALEU, Pu mixed with HALEU, reactor-grade Pu, or TRU) $\approx$ mass of extracted FPs to maintain the total fuel mass constant.
 	\item Dividing this mass by time and inventory of refueling material gives the corresponding feed constant (1/s).
 \end{enumerate}
-In both feed mechanisms (thorium and non-thorium) we continuously added $^{233}$U and the mass of injected $^{233}$U is equal to the mass of extracted Pa ($^{233}$Pa decays to $^{233}$U after $\approx$ 27 d). To keep the total fuel mass almost constant, for \textbf{thorium feed mechanism}, the mass of injected Th must be equal to the mass of extracted FPs and for \textbf{non-thorium feed mechanism}, the mass of injected fuel (i.e., HALEU, Pu mixed with HALEU, reactor-grade Pu, or TRU) must be equal to the mass of extracted FPs.
+In both feed mechanisms (thorium and non-thorium) we continuously added 
+$^{233}$U and the mass of injected $^{233}$U is equal to the mass of extracted 
+Pa ($^{233}$Pa decays to $^{233}$U after $\approx$ 27 d). To keep the total 
+fuel mass almost constant, for \textbf{thorium feed mechanism}, the mass of 
+injected thorium must be equal to the mass of extracted FPs and for 
+\textbf{non-thorium feed mechanism}, the mass of injected fuel (i.e., HALEU, 
+Pu mixed with HALEU, reactor-grade Pu, or TRU) must be equal to the mass of 
+extracted FPs.
 
 \section{Feed and extraction rates} \label{Feed-and-extraction-rates}
 In the present work, two different feed mechanisms are used: (1) thorium and (2) non-thorium.

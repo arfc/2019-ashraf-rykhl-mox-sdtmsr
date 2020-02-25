@@ -12,8 +12,10 @@ this liquid fuel salt (e.g., LiF-BeF$_2$-ThF$_4$-$^{233}$UF$_4$) constantly
 circulates through the core and allows fission heat to transfer from the reactor
 core to intermediate heat exchangers.
 
-The Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR) with a thermal power of 2,250
-MW$_{th}$ was proposed for the first time by ORNL as early as in the 1960s, which was called Molten salt breeding reactor (MSBR) \cite{robertson_conceptual_1971}.
+The Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR) with 
+a thermal power of 2,250 MW$_{th}$ was proposed for the first time by ORNL as 
+early as in the 1960s, which was called Molten Salt Breeder Reactor (MSBR) 
+\cite{robertson_conceptual_1971}.
 The SD-TMSR is a graphite-moderated thermal-spectrum \gls{MSR} operating in Th/$^{233}$U
 fuel cycle. In the SD-TMSR, the fissile and fertile elements are integrated
 into a single salt. To improve the breeding ratio, the active core is divided into two zones:
@@ -54,17 +56,52 @@ be achieved in a thermal smTMSR with a proper fuel fraction
 Heuer \emph{et al.} (2014) discussed the transition characteristics of the \gls{MSFR}
 under different launching scenarios (e.g., enriched uranium and TRU); they concluded that starting the thorium fuel cycle is feasible in the MSFR while closing the current fuel cycle and optimizing the management of the long-term wastes \cite{heuer2014towards}.
 
-Cui \emph{et al.} analyzed the fuel transition from enriched $^{235}$U/Th and Pu/Th to $^{233}$U/Th for the MSBR-like design. Cui \emph{et al.} found that the fuel transition can be achieved by using: (1) enriched uranium with greater than 40\% enrichment, which rises the proliferation concerns; (2) Pu from LWR (burn-up of 60 GWd/t) spent nuclear fuel \cite{cui2017transition,cui2018possible}.
-
 The research effort described in \cite{cui2017transition} and
 \cite{cui2018possible} is most similar to the work
-presented in this paper. However, a few major differences
-are: (1) we used built-in truly continuous fuel depletion capabilities in
-SERPENT-2 \cite{aufiero2013extended} while Cui \emph{et al.} employed an in-house tool named MSR
-Reprocessing Sequence (MSR-RS) \cite{ZOU2015114} which couples with SCALE and employs a batch-wise approach (the burnup simulation stops at a given time and restarts with a new liquid fuel composition after removal of discarded materials and addition of fissile/fertile materials); (2) we investigated different initial loading cases (HALEU, Pu+HALEU, reactor-grade Pu, TRU and $^{233}$U) while Cui \emph{et al.} studied only uranium and Pu as the startup fissile materials; (3) we adopted the SD-TMSR core geometry optimized by Li \emph{et al.} \cite{li_optimization_2018} which is different from the MSBR-like model adopted by Cui \emph{et al.}; (4) Cui \emph{et al.} studied the high-enriched uranium (e$>$90) while we excluded it due to the unavailability of this material for use as an initial reactor fuel (non-proliferation issues) and because the performance of this material is expected to be similar to $^{233}$U; (5) Cui \emph{et al.} introduced two scenarios for thorium fuel cycle transition: a Breeding and Burning (B\&B) scenario and a Pre-breeding scenario while we adopting different approach by introducing two different feed mechanisms: thorium and non-thorium feed mechanism.
+presented in this paper. Cui \emph{et al.} analyzed the fuel transition from 
+enriched $^{235}$U/Th and Pu/Th to $^{233}$U/Th for the MSBR-like design. Cui 
+\emph{et al.} found that the fuel transition can be achieved by using: (1) 
+enriched uranium with greater than 40\% enrichment \cite{cui2018possible}; (2) 
+Pu from LWR (burn-up of 60 GWd/t) spent nuclear fuel \cite{cui2017transition, 
+cui2018possible}.
+ 
+However, a few major differences follow: 
+(1) Cui \emph{et al.} employed an in-house tool named MSR Reprocessing 
+Sequence (MSR-RS) \cite{ZOU2015114} which couples with SCALE and employs a 
+batch-wise approach while we used built-in truly continuous fuel depletion 
+capabilities in SERPENT-2 \cite{aufiero2013extended}; 
+(2) Cui \emph{et al.} studied a high-enriched uranium ($>$40\% of $^{235}$U) 
+and plutonium partitioned from light water reactors spent fuel as the startup 
+fissile materials while we considered different loading cases: HALEU, Pu 
+mixed with HALEU, reactor-grade plutonium, TRU and $^{233}$U;
+(3) we adopted the SD-TMSR core geometry optimized by Li \emph{et al.} 
+\cite{li_optimization_2018} which is different from the MSBR-like geometry by 
+Mathieu \emph{et al.} \cite{mathieu_possible_2009} adopted by Cui \emph{et 
+al.}; 
+(4) Cui \emph{et al.} introduced two scenarios for thorium fuel cycle 
+transition: a Breeding and Burning (B\&B) scenario and a Pre-breeding scenario 
+while we adopting different approach by introducing two different feed 
+mechanisms: thorium and non-thorium.
 
-Comparing with Cui \emph{et al.}, we used different geometry, volumes, densities, and fuel salt compositions. In Cui's scenarios, the amount of Th is kept constant. $^{233}$U is fed only in (B\&B) scenario and extra fissile materials would have to be added into the core if the produced $^{233}$U is not enough to maintain the reactor criticality. In the Pre-breeding scenario, all the $^{233}$U produced from the decay of the extracted $^{233}$Pa stored outside the core until it reaches the required startup mass for a new reactor. Thus, the criticality of the core is maintained by refueling external fissile material. 
-In current work, using the thorium feed mechanism, we simultaneously feed Th and all or part of produced $^{233}$U from the \texttt{Pa-decay tank} into the core. The excess $^{233}$U (if exist) is stored outside the core. In the non-thorium feed mechanism, we continuously inject external heavy metals (HALEU, Pu mixed with HALEU, reactor-grade Pu, or TRU) and part of produced $^{233}$U from the \texttt{Pa-decay tank}. Here we feed a part of produced $^{233}$U because in some cases (e.g., TRU) refueling only external heavy metals failed to maintain the core criticality (limitation is dm$_{total fuel}$ $\leq$ 0.1\%). In the non-thorium feed mechanism, the amount of Th decreases during reactor operation while it is constant in the thorium feed mechanism.
+Comparing with Cui \emph{et al.}, we used different reactor design (geometry, 
+volumes, densities, fuel salt compositions) and computation method (continuous 
+online reprocessing instead of batch-wise approach). In Cui's scenarios, the 
+amount of thorium is kept constant. $^{233}$U is fed only in (B\&B) scenario 
+and extra fissile materials would have to be added into the core if the 
+produced $^{233}$U is not enough to maintain the reactor criticality. In the 
+Pre-breeding scenario, all the $^{233}$U produced from the decay of the 
+extracted $^{233}$Pa stored outside the core until it reaches the required 
+startup mass for a new reactor. Thus, the criticality of the core is 
+maintained by refueling external fissile material. In the current work, using 
+the thorium feed mechanism, we simultaneously feed thorium and all or fraction 
+of produced $^{233}$U from the \texttt{Pa-decay tank} into the core. The 
+excess $^{233}$U (if exists) is stored outside the core. In the non-thorium 
+feed mechanism, we continuously inject external heavy metals (HALEU, Pu mixed 
+with HALEU, reactor-grade Pu, or TRU) and fraction of produced $^{233}$U from 
+the \texttt{Pa-decay tank}. For the non-thorium mechanism, we feed a part of 
+produced $^{233}$U because in some cases (e.g., TRU) refueling only external 
+heavy metals failed to maintain the core criticality (limitation is 
+dm$_{salt}$ $\leq$ 0.1\%). 
 
 Various previous works explore starting the
 \glspl{MSR} with fissile materials alternative to $^{233}$U. Many such publications have focused on the fast-spectrum \glspl{MSR} \cite{heuer2014towards,ashraf2019modeling,
