@@ -209,11 +209,15 @@ changes which certainly improved the paper.
         \question SD-TMSR concept development does not correctly described in the section "introduction", where it states that the SD-TMSR was introduced by the Chinese Academy of Sciences. Actually, SD-TMSR concept was proposed by ORNL as early as in the 1960s, which was called Molten salt breeding reactor (MSBR) (see Ref.: Tech. Rep. ORNL-4541). In addition, the study of reference 7 which was cited to illustrate SD-TMSR concept actually adopted the single-flow single-zone MSR rather than SD-TMSR.
         
         \begin{solution}
-                 Thank you for catching this. The whole statement has been 
+                 Thank you for catching this. Just small correction: this ORNL 
+                 concept was called \emph{Molten Salt Breeder Reactor (MSBR)}. 
+                 The whole statement has been 
                  modified to read:\\
                  
                  The Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR) with a thermal power of 2,250
-                 MW$_{th}$ was proposed for the first time by ORNL as early as in the 1960s, which was called Molten salt breeding reactor (MSBR) \cite{robertson_conceptual_1971}.
+                 MW$_{th}$ was proposed for the first time by ORNL as early as 
+                 in the 1960s, which was called Molten Salt Breeder Reactor 
+                 (MSBR) \cite{robertson_conceptual_1971}.
                  
                  Thank you for catching this. Reference 7 has been removed from the paragraph.
                  
@@ -229,15 +233,87 @@ changes which certainly improved the paper.
                 not studied before" in page 3, has been removed. 
                 The following paragraphs have been added to the manuscript:\\
                 
-                Cui \emph{et al.} analyzed the fuel transition from enriched $^{235}$U/Th and Pu/Th to $^{233}$U/Th for the MSBR-like design. Cui \emph{et al.} found that the fuel transition can be achieved by using: (1) enriched uranium with greater than 40\% enrichment, which rises the proliferation concerns; (2) Pu from LWR (burn-up of 60 GWd/t) spent nuclear fuel \cite{cui2017transition,cui2018possible}. The research effort described in \cite{cui2017transition} and
+                The research effort described in \cite{cui2017transition} and
                 \cite{cui2018possible} is most similar to the work
-                presented in this paper. However, a few major differences
-                are: (1) we used built-in truly continuous fuel depletion capabilities in
-                SERPENT-2 \cite{aufiero2013extended} while Cui \emph{et al.} employed an in-house tool named MSR
-                Reprocessing Sequence (MSR-RS) \cite{ZOU2015114} which couples with SCALE and employs a batch-wise approach (the burnup simulation stops at a given time and restarts with a new liquid fuel composition after removal of discarded materials and addition of fissile/fertile materials); (2) we investigated different initial loading cases (HALEU, Pu+HALEU, reactor-grade Pu, TRU and $^{233}$U) while Cui \emph{et al.} studied only uranium and Pu as the startup fissile materials; (3) we adopted the SD-TMSR core geometry optimized by Li \emph{et al.} \cite{li_optimization_2018} which is different from the MSBR-like model adopted by Cui \emph{et al.}; (4) Cui \emph{et al.} studied the high-enriched uranium (e$>$90) while we excluded it due to the unavailability of this material for use as an initial reactor fuel (non-proliferation issues) and because the performance of this material is expected to be similar to $^{233}$U; (5) Cui \emph{et al.} introduced two scenarios for thorium fuel cycle transition: a Breeding and Burning (B\&B) scenario and a Pre-breeding scenario while we adopting different approach by introducing two different feed mechanisms: thorium and non-thorium feed mechanism.
+                presented in this paper. Cui \emph{et al.} analyzed the fuel 
+                transition from 
+                enriched $^{235}$U/Th and Pu/Th to $^{233}$U/Th for the 
+                MSBR-like design. Cui 
+                \emph{et al.} found that the fuel transition can be achieved 
+                by using: (1) 
+                enriched uranium with greater than 40\% enrichment 
+                \cite{cui2018possible}; (2) 
+                Pu from LWR (burn-up of 60 GWd/t) spent nuclear fuel 
+                \cite{cui2017transition, 
+                	cui2018possible}.
                 
-                Comparing with Cui \emph{et al.}, we used different geometry, volumes, densities, and fuel salt compositions. In Cui's scenarios, the amount of Th is kept constant. $^{233}$U is fed only in (B\&B) scenario and extra fissile materials would have to be added into the core if the produced $^{233}$U is not enough to maintain the reactor criticality. In the Pre-breeding scenario, all the $^{233}$U produced from the decay of the extracted $^{233}$Pa stored outside the core until it reaches the required startup mass for a new reactor. Thus, the criticality of the core is maintained by refueling external fissile material. 
-                In current work, using the thorium feed mechanism, we simultaneously feed Th and all or part of produced $^{233}$U from the \texttt{Pa-decay tank} into the core. The excess $^{233}$U (if exist) is stored outside the core. In the non-thorium feed mechanism, we continuously inject external heavy metals (HALEU, Pu mixed with HALEU, reactor-grade Pu, or TRU) and part of produced $^{233}$U from the \texttt{Pa-decay tank}. Here we feed a part of produced $^{233}$U because in some cases (e.g., TRU) refueling only external heavy metals failed to maintain the core criticality (limitation is dm$_{total fuel}$ $\leq$ 0.1\%). In the non-thorium feed mechanism, the amount of Th decreases during reactor operation while it is constant in the thorium feed mechanism.
+                However, a few major differences follow: 
+                (1) Cui \emph{et al.} employed an in-house tool named MSR 
+                Reprocessing 
+                Sequence (MSR-RS) \cite{ZOU2015114} which couples with SCALE 
+                and employs a 
+                batch-wise approach while we used built-in truly continuous 
+                fuel depletion 
+                capabilities in SERPENT-2 \cite{aufiero2013extended}; 
+                (2) Cui \emph{et al.} studied a high-enriched uranium ($>$40\% 
+                of $^{235}$U) 
+                and plutonium partitioned from light water reactors spent fuel 
+                as the startup 
+                fissile materials while we considered different loading cases: 
+                HALEU, Pu 
+                mixed with HALEU, reactor-grade plutonium, TRU and $^{233}$U;
+                (3) we adopted the SD-TMSR core geometry optimized by Li 
+                \emph{et al.} 
+                \cite{li_optimization_2018} which is different from the 
+                MSBR-like geometry by 
+                Mathieu \emph{et al.} \cite{mathieu_possible_2009} adopted by 
+                Cui \emph{et 
+                	al.}; 
+                (4) Cui \emph{et al.} introduced two scenarios for thorium 
+                fuel cycle 
+                transition: a Breeding and Burning (B\&B) scenario and a 
+                Pre-breeding scenario 
+                while we adopting different approach by introducing two 
+                different feed 
+                mechanisms: thorium and non-thorium.
+                
+                Comparing with Cui \emph{et al.}, we used different reactor 
+                design (geometry, 
+                volumes, densities, fuel salt compositions) and computation 
+                method (continuous 
+                online reprocessing instead of batch-wise approach). In Cui's 
+                scenarios, the 
+                amount of thorium is kept constant. $^{233}$U is fed only in 
+                (B\&B) scenario 
+                and extra fissile materials would have to be added into the 
+                core if the 
+                produced $^{233}$U is not enough to maintain the reactor 
+                criticality. In the 
+                Pre-breeding scenario, all the $^{233}$U produced from the 
+                decay of the 
+                extracted $^{233}$Pa stored outside the core until it reaches 
+                the required 
+                startup mass for a new reactor. Thus, the criticality of the 
+                core is 
+                maintained by refueling external fissile material. In the 
+                current work, using 
+                the thorium feed mechanism, we simultaneously feed thorium and 
+                all or fraction 
+                of produced $^{233}$U from the \texttt{Pa-decay tank} into the 
+                core. The 
+                excess $^{233}$U (if exists) is stored outside the core. In 
+                the non-thorium 
+                feed mechanism, we continuously inject external heavy metals 
+                (HALEU, Pu mixed 
+                with HALEU, reactor-grade Pu, or TRU) and fraction of produced 
+                $^{233}$U from 
+                the \texttt{Pa-decay tank}. For the non-thorium mechanism, we 
+                feed a part of 
+                produced $^{233}$U because in some cases (e.g., TRU) refueling 
+                only external 
+                heavy metals failed to maintain the core criticality 
+                (limitation is 
+                dm$_{salt}$ $\leq$ 0.1\%). 
                 
         \end{solution}
 
@@ -254,21 +330,33 @@ changes which certainly improved the paper.
                $^{233}$U is equal to the mass of extracted Pa ($^{233}$Pa 
                decays to $^{233}$U after $\approx$ 27 d). To keep the total 
                fuel mass almost constant, for \textbf{thorium feed mechanism}, 
-               the mass of injected Th must be equal to the mass of extracted 
-               FPs and for \textbf{non-thorium feed mechanism}, the mass of 
-               injected fuel (i.e., HALEU, Pu mixed with HALEU, reactor-grade 
-               Pu, or TRU) must be equal to the mass of extracted FPs.
-               We rewrite the paragraph on page 11 to clarify this point:\\
+               the mass of injected thorium must be equal to the mass of 
+               extracted FPs and for \textbf{non-thorium feed mechanism}, the 
+               mass of injected fuel (i.e., HALEU, Pu mixed with HALEU, 
+               reactor-grade Pu, or TRU) must be equal to the mass of 
+               extracted FPs. We rewrite the paragraph on page 11 to clarify 
+               this point:\\
                
                \begin{enumerate}
                	\item The simulation starts without injecting refueling materials (i.e. only removing FPs and Pa).
                	\item After the first depletion calculation step, we check the total mass density of FPs and Pa in the \texttt{FP-waste tank} and \texttt{Pa-decay tank}, respectively.
                	\item A simple calculation yields the amount of heavy metal that must be added during this cycle:
-               	\subitem 3a. \textbf{Thorium feed mechanism}: mass of injected $^{233}$U $\approx$ mass of extracted Pa and mass of injected Th $\approx$ mass of extracted FPs to maintain the total fuel mass constant.
+               	\subitem 3a. \textbf{Thorium feed mechanism}: mass of injected 
+               	$^{233}$U $\approx$ mass of extracted Pa and mass of injected 
+               	$^{232}$Th $\approx$ mass of extracted FPs to maintain the 
+               	total fuel mass constant.
                	\subitem 3b. \textbf{Non-thorium feed mechanism}: mass of injected $^{233}$U $\approx$ mass of extracted Pa and mass of injected fuel (i.e., HALEU, Pu mixed with HALEU, reactor-grade Pu, or TRU) $\approx$ mass of extracted FPs to maintain the total fuel mass constant.
                	\item Dividing this mass by time and inventory of refueling material gives the corresponding feed constant (1/s).
                \end{enumerate}
-               In both feed mechanisms (thorium and non-thorium) we continuously added $^{233}$U and the mass of injected $^{233}$U is equal to the mass of extracted Pa ($^{233}$Pa decays to $^{233}$U after $\approx$ 27 d). To keep the total fuel mass almost constant, for \textbf{thorium feed mechanism}, the mass of injected Th must be equal to the mass of extracted FPs and for \textbf{non-thorium feed mechanism}, the mass of injected fuel (i.e., HALEU, Pu mixed with HALEU, reactor-grade Pu, or TRU) must be equal to the mass of extracted FPs.
+               In both feed mechanisms (thorium and non-thorium) we 
+               continuously added $^{233}$U and the mass of injected $^{233}$U 
+               is equal to the mass of extracted Pa ($^{233}$Pa decays to 
+               $^{233}$U after $\approx$ 27 d). To keep the total fuel mass 
+               almost constant, for \textbf{thorium feed mechanism}, the mass 
+               of injected thorium must be equal to the mass of extracted FPs 
+               and for \textbf{non-thorium feed mechanism}, the mass of 
+               injected fuel (i.e., HALEU, Pu mixed with HALEU, reactor-grade 
+               Pu, or TRU) must be equal to the mass of extracted FPs.
                
         \end{solution}
 
@@ -280,7 +368,31 @@ changes which certainly improved the paper.
                  in Figure 3 have been described in the manuscript.
                  The following paragraph and additional Figure~4 has been added to the manuscript:\\
                  
-                 For Pu+HALEU case, $k_{eff}$ firstly increases during the first $\approx$ $3$ EFPY and then gradually decreases. This is due to the conversion of $^{238}$U from HALEU into fissile plutonium, which often produces the majority of the neutrons until the transition to Th/$^{233}$U fuel cycle. Figure~4 shows the variation in fissile plutonium isotopes ($^{239}$Pu , $^{241}$Pu, and $^{243}$Pu) inventory during reactor operation. For TRU and reactor-grade Pu, the fissile plutonium isotopes are gradually depleted, during operating (the fissile material is dominated by Pu in these cases). For HALEU case, the fissile material is dominated by $^{235}$U, however, $^{238}$U is converted into fissile plutonium. Therefore, the mass of fissile plutonium increases during operating but its value still relatively low. For Pu+HALEU case, the mass of the fissile plutonium isotopes increases within the first $\approx$ $3$ EFPY and then decreases. The reactivity from the produced Pu is much greater than the depletion of the initial reactivity (due to the depletion of initial fissile isotopes), consequently, $k_{eff}$ increases during the first $\approx$ $3$ years and then decreases; the amount of $^{233}$U generated in the Pu+HALEU case is insufficient to maintain the reactor criticality and counteract neutron absorption in non-fissile isotopes.\\
+                 For the Pu+HALEU case, $k_{eff}$ firstly increases during the 
+                 first $\approx$ $3$ EFPY and then gradually decreases. This 
+                 is due to the conversion of $^{238}$U from HALEU into fissile 
+                 plutonium, which often produces the majority of the neutrons 
+                 until the transition to Th/$^{233}$U fuel cycle. Figure~4 
+                 shows the variation in fissile plutonium isotopes ($^{239}$Pu 
+                 , $^{241}$Pu, and $^{243}$Pu) inventory during reactor 
+                 operation. For TRU and reactor-grade Pu, the fissile 
+                 plutonium isotopes are gradually depleted, during operating 
+                 (the fissile material is dominated by Pu in these cases). For 
+                 the HALEU case, the fissile material is dominated by 
+                 $^{235}$U, 
+                 however, $^{238}$U is converted into fissile plutonium. 
+                 Therefore, the mass of fissile plutonium increases during 
+                 operating but its value still relatively low. For the 
+                 Pu+HALEU case, the mass of the fissile plutonium isotopes 
+                 increases 
+                 within the first $\approx$ $3$ EFPY and then decreases. The 
+                 reactivity from the produced Pu is much greater than the 
+                 depletion of the initial reactivity (due to the depletion of 
+                 initial fissile isotopes), consequently, $k_{eff}$ increases 
+                 during the first $\approx$ $3$ years and then decreases; the 
+                 amount of $^{233}$U generated in the Pu+HALEU case is 
+                 insufficient to maintain the reactor criticality and 
+                 counteract neutron absorption in non-fissile isotopes.\\
                  
                  Figure~3 shows that the decrease in $k_{eff}$ for reactor-grade Pu case occurs at the much later operating time than for other cases because the neutron spectrum in the reactor-grade Pu initial core is hardened; more $^{232}$Th is being converted to $^{233}$U. Nevertheless, this amount of the $^{233}$U is not enough to counteract the neutron absorption in the non-fissile Pu isotopes after much of the $^{239}$Pu and $^{241}$Pu is depleted.
                  
@@ -340,9 +452,18 @@ changes which certainly improved the paper.
         the Pu reactor-grade (initial) case has a small change in the outer 
         core zone and reflector. 
         \begin{solution}
-				Thank you for pointing it out. In this paragraph, we comparing 
-				changes in the flux due to fuel salt depletion (initial vs 
-				equilibrium), but not with $r$ coordinate. Figure 15 shows 
+				Thank you for pointing it out. 
+				At the EOL the fuel salt composition is more or less the same 
+				(``equilibrium'' composition), hence, both fast and thermal 
+				fluxes looks very similar for plutonium and TRU cases.
+				At the BOL, this difference is caused by different $^{232}$Th 
+				inventory at BOL for Pu reactor-grade (67.5t) and TRU (54.4t). 
+				 $^{232}$Th is a strong absorber in the thermal and 
+				 intermediate energy range, so, it causes such a significant  
+				 difference in the flux: reactor-grade Pu composition provides 
+				 much harder spectrum (see Figure~14) at BOL.
+				
+                Figure 15 shows 
 				significant changes \textbf{during reactor operation} in the 
 				outer core zone for the Pu (green line) and almost no changes 
 				for the TRU (orange). However, we are agree that thermal flux 
@@ -353,7 +474,7 @@ changes which certainly improved the paper.
 				loading.			
 				
 				The following paragraphs have been added to the manuscript for 
-				clarify this point:\\
+				clarification:\\
 				
 				Notably, the neutron flux change for both the fast and thermal 
 				energies is much larger for the reactor-grade Pu case than for 
@@ -380,13 +501,14 @@ changes which certainly improved the paper.
 				outer core zone. In the outer core zone, significant changes 
 				during reactor operation are observed for the thermal 
 				neutron flux for the reactor-grade Pu case. In contrast, for 
-				the TRU case, it is almost negligible. Additionally, 
+				the TRU case, thermal neutron flux change in the outer core 
+				zone  is almost negligible. Additionally, 
 				Figure~16 shows relatively significant changes in thermal flux 
 				leakage from the core for the Pu (equilibrium composition) and 
 				TRU (initial and equilibrium composition) cases. The SD-TMSR 
 				core design was optimized for $^{233}$U  				
 				\cite{li_optimization_2018}; thus, the core geometry (e.g., 
-				channels lattice pitch) must be re-optimized for another type 
+				channel lattice pitch) must be re-optimized for another type 
 				of fuel to obtain better neutronics performance.
         \end{solution}
 
